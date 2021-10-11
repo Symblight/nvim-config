@@ -20,8 +20,14 @@ if has("nvim")
 
     " Dev icons
     Plug 'ryanoasis/vim-devicons'
+    Plug 'kyazdani42/nvim-web-devicons'
+    
+    Plug 'folke/trouble.nvim'
 
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
+    " Git
+    Plug 'lewis6991/gitsigns.nvim'
 
     " For Telescope
     Plug 'nvim-lua/plenary.nvim'
@@ -31,10 +37,13 @@ if has("nvim")
     Plug 'yuezk/vim-js'
     Plug 'maxmellon/vim-jsx-pretty'
 
-    " colors
+    " theme colors
     Plug 'cormacrelf/vim-colors-github'
     Plug 'sonph/onehalf', { 'rtp': 'vim' }
     Plug 'sainnhe/sonokai'
+
+    " highlight
+    Plug 'norcalli/nvim-colorizer.lua'
 
     Plug 'neovim/nvim-lspconfig'
     Plug 'glepnir/lspsaga.nvim'
