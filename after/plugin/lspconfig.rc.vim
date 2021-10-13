@@ -5,10 +5,26 @@ endif
 lua << EOF
 vim.lsp.set_log_level("debug")
 EOF
-
 lua << EOF
 local nvim_lsp = require('lspconfig')
 local protocol = require'vim.lsp.protocol'
+
+local function eslint_config_exists()
+  local eslintrc = vim.fn.glob(".eslintrc*", 0, 1)
+
+  if not vim.tbl_isempty(eslintrc) then
+    return true
+  end
+
+  if vim.fn.filereadable("package.json") then
+    if vim.fn.json_decode(vim.fn.readfile("package.json"))["eslintConfig"] then
+      return true
+    end
+  end
+
+  return false
+end
+
 
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
@@ -76,7 +92,7 @@ nvim_lsp.tsserver.setup {
 
 nvim_lsp.diagnosticls.setup {
   on_attach = on_attach,
-  filetypes = { 'javascript', 'javascriptreact', 'json', 'typescript', 'typescriptreact', 'css', 'less', 'scss', 'markdown', 'pandoc' },
+  filetypes = {'javascript', 'javascriptreact', 'json', 'typescript', 'typescriptreact', 'css', 'less', 'scss', 'markdown', 'pandoc' },
   init_options = {
     linters = {
       eslint = {
@@ -85,6 +101,7 @@ nvim_lsp.diagnosticls.setup {
         debounce = 100,
         args = { '--stdin', '--stdin-filename', '%filepath', '--format', 'json' },
         sourceName = 'eslint_d',
+            
         parseJson = {
           errorsRoot = '[0].messages',
           line = 'line',
@@ -125,10 +142,10 @@ nvim_lsp.diagnosticls.setup {
       scss = 'prettier',
       less = 'prettier',
       typescript = 'eslint_d',
-      typescriptreact = 'eslint_d',
+      typescriptreact = 'prettier', 
       json = 'prettier',
       markdown = 'prettier',
-    }
+     }
   }
 }
 

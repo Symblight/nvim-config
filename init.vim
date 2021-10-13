@@ -40,7 +40,7 @@ if has("unix")
 endif
 
 "}}}
-colorscheme sonokai
+colorscheme dracula
 " colorscheme onehalfdark
 
 if (has('termguicolors'))
