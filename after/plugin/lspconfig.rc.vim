@@ -7,24 +7,12 @@ vim.lsp.set_log_level("debug")
 EOF
 lua << EOF
 local nvim_lsp = require('lspconfig')
+--local on_attach = require '..\\..\\modules.config.nvim-config.on-attach'
+-- local lsp_installer = require("nvim-lsp-installer")
+
 local protocol = require'vim.lsp.protocol'
 
-local function eslint_config_exists()
-  local eslintrc = vim.fn.glob(".eslintrc*", 0, 1)
-
-  if not vim.tbl_isempty(eslintrc) then
-    return true
-  end
-
-  if vim.fn.filereadable("package.json") then
-    if vim.fn.json_decode(vim.fn.readfile("package.json"))["eslintConfig"] then
-      return true
-    end
-  end
-
-  return false
-end
-
+local root_pattern = require("lspconfig.util").root_pattern
 
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
@@ -73,6 +61,31 @@ end
 
 -- map buffer local keybindings when the language server attaches
 
+local eslint = {
+  lintCommand = 'eslint_d -f unix --stdin --stdin-filename ${INPUT}',
+  lintIgnoreExitCode = true,
+  lintStdin = true,
+  lintFormats = { '%f:%l:%c: %m' },
+  formatCommand = 'eslint_d --fix-to-stdout --stdin --stdin-filename=${INPUT}',
+  formatStdin = true,
+}
+
+local prettier = { formatCommand = 'prettier --stdin-filepath ${INPUT}', formatStdin = true }
+
+local languages = {
+  css = { prettier },
+  html = { prettier },
+  javascript = { prettier, eslint },
+  javascriptreact = { prettier, eslint },
+  json = { prettier },
+  markdown = { prettier },
+  scss = { prettier },
+  typescript = { prettier, eslint },
+  typescriptreact = { prettier, eslint },
+  yaml = { prettier },
+}
+
+-- Setup servers
 local servers = { 'pyright', 'rust_analyzer' }
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
@@ -83,14 +96,37 @@ for _, lsp in ipairs(servers) do
   }
 end
 
+ nvim_lsp.tsserver.setup {
+    on_attach = function(client)
+        client.resolved_capabilities.document_formatting = false
+        on_attach(client, bufnr)
+    end,
+    filetypes = { "typescript", "typescriptreact", "typescript.tsx" },
+    root_dir = root_pattern(
+        "package.json",
+        "tsconfig.json",
+        "jsconfig.json",
+        ".git",
+        vim.fn.getcwd()
+    )
+}
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
-
-nvim_lsp.tsserver.setup {
-  on_attach = on_attach,
-  filetypes = { "typescript", "typescriptreact", "typescript.tsx" }
+nvim_lsp.efm.setup {
+    capabilities = capabilities,
+    on_attach = on_attach,
+    filetypes = vim.tbl_keys(languages),
+    init_options = {documentFormatting = true, codeAction = false},
+    settings = {
+        languages = languages,
+    },
+    root_dir = nvim_lsp.util.root_pattern { '.git/', '.' },
 }
 
+
 nvim_lsp.diagnosticls.setup {
+  capabilities = capabilities,
   on_attach = on_attach,
   filetypes = {'javascript', 'javascriptreact', 'json', 'typescript', 'typescriptreact', 'css', 'less', 'scss', 'markdown', 'pandoc' },
   init_options = {

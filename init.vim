@@ -40,7 +40,13 @@ if has("unix")
 endif
 
 "}}}
-colorscheme dracula
+" colorscheme dracula
+" colorscheme one
+colorscheme sonokai 
+let g:sonokai_style = 'andromeda'
+let g:sonokai_enable_italic = 1
+let g:sonokai_disable_italic_comment = 1
+set background=dark
 " colorscheme onehalfdark
 
 if (has('termguicolors'))
@@ -60,7 +66,7 @@ nnoremap ,<space> :nohlsearch<CR>
 if v:version < 700 || exists('loaded_bclose') || &cp
   finish
 endif
-let loaded_bclose = 1
+let loaded_bclose = 14
 if !exists('bclose_multiple')
   let bclose_multiple = 1
 endif

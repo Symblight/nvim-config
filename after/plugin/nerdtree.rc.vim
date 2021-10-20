@@ -4,3 +4,5 @@ nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 
 autocmd BufEnter * lcd %:p:h
+autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
+let NERDTreeShowHidden=1
