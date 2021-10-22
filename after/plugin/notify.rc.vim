@@ -13,8 +13,8 @@ require("notify").setup({
 
   -- Icons for the different levels
   icons = {
-    ERROR = "?",
-    WARN = "?",
+    ERROR = "!",
+    WARN = "⚠",
     INFO = "?",
     DEBUG = "?",
     TRACE = "?",

@@ -14,10 +14,11 @@ if has("nvim")
     Plug 'hrsh7th/nvim-cmp'
     Plug 'hrsh7th/cmp-nvim-lsp'
     Plug 'hrsh7th/cmp-buffer'
-    Plug 'saadparwaiz1/cmp_luasnip'
+    Plug 'hrsh7th/cmp-path'
     Plug 'L3MON4D3/LuaSnip'
-    Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    " Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+    Plug 'onsails/lspkind-nvim'
     " Notify
     Plug 'rcarriga/nvim-notify'
 

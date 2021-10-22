@@ -1,13 +1,23 @@
-set completeopt=menu,menuone,noselect
-lua << EOF
 -- Set completeopt to have a better completion experience
 
+vim.opt.completeopt = { "menu", "menuone", "noselect" }
 -- luasnip setup
 local luasnip = require 'luasnip'
-
+local lspkind = require 'lspkind'
+lspkind.init()
 -- nvim-cmp setup
 local cmp = require 'cmp'
+
 cmp.setup {
+  formatting = {
+    format = lspkind.cmp_format({with_text = false, maxwidth = 50, 
+        menu = {
+            buffer = "[buf]",
+            nvim_lsp = "[LSP]",
+            path = "[path]"
+        }
+    })
+  },
   completion = {
     autocomplete = true,
     completeopt = 'menu,menuone,noinsert',
@@ -28,26 +38,20 @@ cmp.setup {
       behavior = cmp.ConfirmBehavior.Replace,
       select = true,
     },
-   ['<Tab>'] = function(fallback)
-      if cmp.visible() then
-        cmp.select_next_item()
-          else
-        fallback()
-      end
-    end,
-    ['<S-Tab>'] = function(fallback)
-      if cmp.visible() then
-        cmp.select_next_item()
-      else
-        fallback()
-      end
-    end,
   },
   sources = {
     { name = 'nvim_lsp' },
+    { name = "path" },
+    { name = "buffer", keyword_length = 5 },
     { name = 'luasnip' },
   },
+  experimental = {
+    -- I like the new menu better! Nice work hrsh7th
+    native_menu = false,
+
+    -- Let's play with this for a day or two
+    ghost_text = true,
+  },
 }
-EOF
 
  
