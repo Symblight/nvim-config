@@ -1,5 +1,3 @@
-lua <<EOF
-
 require("notify").setup({
   -- Animation style (see below for details)
   stages = "fade_in_slide_out",
@@ -9,7 +7,7 @@ require("notify").setup({
 
   -- For stages that change opacity this is treated as the highlight behind the window
   -- Set this to either a highlight group or an RGB hex value e.g. "#000000"
-  background_colour = "Normal",
+  background_colour = "#000000",
 
   -- Icons for the different levels
   icons = {
@@ -20,4 +18,5 @@ require("notify").setup({
     TRACE = "?",
   },
 })
-EOF
+
+vim.notify = require("notify")
