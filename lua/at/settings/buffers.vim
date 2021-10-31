@@ -1,66 +1,4 @@
-" init autocmd
 autocmd!
-" set script encoding
-scriptencoding utf-8
-" stop loading config if it's on tiny or small
-set mouse=a  " enable mouse
-set encoding=utf-8
-set number
-set noswapfile
-set scrolloff=7
-set guifont=Monaco:h2
-
-set title
-set autoindent
-set background=dark
-set nobackup
-set hlsearch
-set showcmd
-
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set expandtab
-set autoindent
-set fileformat=unix
-filetype indent on      " load filetype-specific indent files
-
-" Suppress appending <PasteStart> and <PasteEnd> when pasting
-"}}}
-
-" Imports "{{{
-" ---------------------------------------------------------------------
-runtime ./plug.vim
-if has("unix")
-  let s:uname = system("uname -s")
-  " Do Mac stuff
-  if s:uname == "Darwin\n"
-    runtime ./macos.vim
-  endif
-endif
-
-"}}}
-" colorscheme dracula
-" colorscheme one
-colorscheme sonokai 
-let g:sonokai_style = 'andromeda'
-let g:sonokai_enable_italic = 1
-let g:sonokai_disable_italic_comment = 1
-set background=dark
-" colorscheme onehalfdark
-
-if (has('termguicolors'))
-  set termguicolors
-endif
-
-" variants: mirage, dark, dark
-"let ayucolor="mirage"
-"colorscheme ayu
-
-
-
-" turn off search highlight
-nnoremap ,<space> :nohlsearch<CR>
 " Delete buffer while keeping window layout (don't close buffer's windows).
 " Version 2008-11-18 from http://vim.wikia.com/wiki/VimTip165
 if v:version < 700 || exists('loaded_bclose') || &cp
@@ -82,7 +20,7 @@ endfunction
 " The window will show the alternate buffer (Ctrl-^) if it exists,
 " or the previous buffer (:bp), or a blank buffer if no previous.
 " Command ':Bclose!' is the same, but executes ':bd!' (discard changes).
-" An optional argument can specify which buffer to close (name or number).
+" An optional argument can specify which buffer to close (name or number.
 function! s:Bclose(bang, buffer)
   if empty(a:buffer)
     let btarget = bufnr('%')
@@ -139,7 +77,4 @@ nnoremap <silent> <Leader>bd :Bclose<CR>
 
 map gn :bn<cr>
 map gp :bp<cr>
-map gw :Bclose<cr>
-
-set colorcolumn=79
-
+map gw :Bclose<cr>)
