@@ -15,3 +15,6 @@ require('at.plugins.config.trouble')
 
 -- Neogit
 require('at.plugins.config.neogit')
+
+-- Navigator
+require('at.plugins.config.navigator')

@@ -56,6 +56,8 @@ return require('packer').startup(function()
 
   -- Colorshemas
   use "projekt0n/github-nvim-theme"
+  use "morhetz/gruvbox"
+  use "mhartington/oceanic-next"
 
   -- CSS
   use {"hail2u/vim-css3-syntax"}
@@ -72,6 +74,7 @@ return require('packer').startup(function()
   use "preservim/nerdtree"
   use "Xuyuanp/nerdtree-git-plugin"
   use "tiagofumo/vim-nerdtree-syntax-highlight"
+  use {'ray-x/navigator.lua', requires = {'ray-x/guihua.lua', run = 'cd lua/fzy && make'}}
 
   use "prettier/vim-prettier"
   use "editorconfig/editorconfig-vim"
@@ -85,4 +88,7 @@ return require('packer').startup(function()
   -- JSON
   use "elzr/vim-json"
   use "neoclide/jsonc.vim"
+
+  -- Rust
+  use "rust-lang/rust.vim"
 end)
