@@ -9,6 +9,7 @@ require'nvim-treesitter.configs'.setup {
   },
   ensure_installed = {
     "tsx",
+    "rust",
     "typescript",
     "svelte",
     "javascript",
@@ -16,10 +17,12 @@ require'nvim-treesitter.configs'.setup {
     "json",
     "yaml",
     "html",
+    "scss",
+    "ruby",
+    "css",
     "scss"
   },
 }
 
 local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
-parser_config.tsx.used_by = { "javascript", "typescript.tsx" }
 

@@ -16,3 +16,6 @@ vim.cmd("hi CursorLineNR guifg=#ffffff")
 
 vim.cmd("let g:gruvbox_italic=1")
 vim.cmd("let g:gruvbox_contrast_dark='medium'")
+
+vim.cmd("colorscheme nordfox")
+

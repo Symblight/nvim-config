@@ -12,7 +12,6 @@ nvim_lsp.efm.setup {
     capabilities = capabilities,
     on_attach = on_attach,
     filetypes = vim.tbl_keys(efm_languages),
-    init_options = {documentFormatting = true, codeAction = false},
     settings = {
         languages = efm_languages,
     },

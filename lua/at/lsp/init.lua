@@ -10,10 +10,10 @@ require('at.lsp.tsserver')
 require('at.lsp.efm')
 
 -- Diagnostic language server
-require('at.lsp.diagnosticls')
+-- require('at.lsp.diagnosticls')
 
 -- Setup servers
-local servers = { 'pyright', 'rust_analyzer' }
+local servers = { 'pyright' }
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
     on_attach = on_attach,
@@ -22,6 +22,20 @@ for _, lsp in ipairs(servers) do
     }
   }
 end
+
+nvim_lsp.rust_analyzer.setup {
+  on_attach = on_attach,
+  flags = {
+    debounce_text_changes = 150,
+  },
+  settings = {
+    ["rust-analyzer"] = {
+      cargo = {
+          loadOutDirsFromCheck = true;
+        }
+    }
+  }
+}
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
@@ -40,13 +54,25 @@ nvim_lsp.html.setup {
 -- Svelte
 nvim_lsp.svelte.setup{
   capabilities = capabilities,
+  on_attach = on_attach,
+  default_config = {
+    cmd = { bin_name, '--stdio' },
+    filetypes = { 'svelte' },
+  }
 }
 
 -- Bash
-nvim_lsp.bashls.setup({
+nvim_lsp.bashls.setup {
   on_attach = on_attach
-})
+}
 
+--Ruby
+nvim_lsp.solargraph.setup {
+  on_attach = on_attach,
+  flags = {
+	  debounce_text_changes = 150,
+	}
+}
 
 
 -- icon

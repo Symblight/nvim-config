@@ -7,17 +7,22 @@ end
 return require('packer').startup(function() 
   use {"wbthomason/packer.nvim"}
 
+  -- LSP
   use "neovim/nvim-lspconfig"
+  use "lspcontainers/lspcontainers.nvim"
+
   use "rcarriga/nvim-notify"
   use "hoob3rt/lualine.nvim"
 
-  use { "hrsh7th/nvim-cmp" }
-
   use 'L3MON4D3/LuaSnip' -- Snippets plugin
+  use 'saadparwaiz1/cmp_luasnip'
+
   use 'hrsh7th/cmp-nvim-lsp' -- Source nvim lsp
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'
   use 'hrsh7th/cmp-nvim-lua'
+  use "hrsh7th/cmp-cmdline"
+  use "hrsh7th/nvim-cmp"
 
   use "windwp/nvim-autopairs"
   use "onsails/lspkind-nvim"
@@ -27,8 +32,6 @@ return require('packer').startup(function()
   -- Icons
   use "ryanoasis/vim-devicons"
   use "kyazdani42/nvim-web-devicons"
-
-  use "folke/trouble.nvim"
 
   use "nvim-treesitter/nvim-treesitter"
 
@@ -48,7 +51,11 @@ return require('packer').startup(function()
   -- JSX/JS
   use "yuezk/vim-js"
   use "maxmellon/vim-jsx-pretty"
-  use "leafOfTree/vim-svelte-plugin"
+
+  -- Svelte
+  use "evanleck/vim-svelte"
+  use "pangloss/vim-javascript"
+  use "HerringtonDarkholme/yats.vim"
 
   -- FZF
   use { "junegunn/fzf", run = "./install --all" }
@@ -58,6 +65,7 @@ return require('packer').startup(function()
   use "projekt0n/github-nvim-theme"
   use "morhetz/gruvbox"
   use "mhartington/oceanic-next"
+  use "EdenEast/nightfox.nvim"
 
   -- CSS
   use {"hail2u/vim-css3-syntax"}
@@ -91,4 +99,5 @@ return require('packer').startup(function()
 
   -- Rust
   use "rust-lang/rust.vim"
+  use "cespare/vim-toml"
 end)
