@@ -14,7 +14,7 @@ https://github.com/rockerBOO/awesome-neovim
 
 # Hot keys
 
-[hot keys neovim](https://gist.github.com/subfuzion/7d00a6c919eeffaf6d3dbf9a4eb11d64)
+[hot keys neovim](https://gist.github.com/awidegreen/3854277)
 
 ### plugins hot keys
 
