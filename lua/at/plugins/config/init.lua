@@ -13,6 +13,9 @@ require('at.plugins.config.treesitter')
 -- Trouble
 -- require('at.plugins.config.trouble')
 
+-- Comment
+require('at.plugins.config.comment')
+
 -- Neogit
 require('at.plugins.config.neogit')
 

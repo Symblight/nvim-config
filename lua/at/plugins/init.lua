@@ -30,12 +30,7 @@ return require('packer').startup(function()
   use "folke/lsp-colors.nvim"
 
   -- Commit
-  use {
-    'numToStr/Comment.nvim',
-    config = function()
-        require('Comment').setup()
-    end
-  }
+  use 'numToStr/Comment.nvim'
 
   -- Icons
   use "ryanoasis/vim-devicons"

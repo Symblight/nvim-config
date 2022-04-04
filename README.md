@@ -36,6 +36,7 @@ https://github.com/rockerBOO/awesome-neovim
 
 - `gc` - Toggles the region using linewise comment
 - `gb` - Toggles the region using blockwise comment
+- `g<` - Uncomments
 
 ### Copilot
 
