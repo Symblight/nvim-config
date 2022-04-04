@@ -29,6 +29,14 @@ return require('packer').startup(function()
 
   use "folke/lsp-colors.nvim"
 
+  -- Commit
+  use {
+    'numToStr/Comment.nvim',
+    config = function()
+        require('Comment').setup()
+    end
+  }
+
   -- Icons
   use "ryanoasis/vim-devicons"
   use "kyazdani42/nvim-web-devicons"
