@@ -10,7 +10,7 @@ require('at.lsp.tsserver')
 require('at.lsp.efm')
 
 -- Diagnostic language server
--- require('at.lsp.diagnosticls')
+require('at.lsp.diagnosticls')
 
 -- Setup servers
 local servers = { 'pyright' }

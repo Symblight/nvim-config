@@ -25,3 +25,6 @@ require('at.plugins.config.gitsigns')
 require('at.plugins.config.autopairs')
 
 require('at.plugins.config.colorizer')
+
+-- Saga
+require('at.plugins.config.lspsaga')
