@@ -35,6 +35,9 @@ return require('packer').startup(function()
 
   use "nvim-treesitter/nvim-treesitter"
 
+  -- AI
+  use "github/copilot.vim"
+
   -- Git
   use "lewis6991/gitsigns.nvim"
   use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
