@@ -1,8 +1,8 @@
 ![cover](./images/neovim-logo-300x87.png)
 
-## Contents
+# Contents
 
-- vim (NeoVim) config
+- vim (NeoVim 0.6.1) config
 
 ### LSP servers
 
@@ -13,6 +13,10 @@ https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.m
 https://github.com/rockerBOO/awesome-neovim
 
 # Hot keys
+
+[hot keys neovim](https://gist.github.com/subfuzion/7d00a6c919eeffaf6d3dbf9a4eb11d64)
+
+### plugins hot keys
 
 - `ctrl+S` = autocomplete
 - `ctrl+h` = docs
@@ -25,7 +29,7 @@ https://github.com/rockerBOO/awesome-neovim
 - `ctrl+w+v` = vertical splitting
 - `ctrl+w+left/right/up/down` = switch between panels
 
-## Comming by plugin
+## Comments by plugin
 
 ### NORMAL mode
 
