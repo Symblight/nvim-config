@@ -11,7 +11,7 @@ require('at.plugins.config.lsp-colors')
 require('at.plugins.config.treesitter')
 
 -- Trouble
--- require('at.plugins.config.trouble')
+require('at.plugins.config.trouble')
 
 -- Comment
 require('at.plugins.config.comment')

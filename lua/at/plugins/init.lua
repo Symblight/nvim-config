@@ -4,8 +4,10 @@ if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
 end
 
 
-return require('packer').startup(function() 
+return require("packer").startup(function() 
   use {"wbthomason/packer.nvim"}
+
+  use "folke/trouble.nvim"
 
   -- LSP
   use "neovim/nvim-lspconfig"
@@ -14,13 +16,13 @@ return require('packer').startup(function()
   use "rcarriga/nvim-notify"
   use "hoob3rt/lualine.nvim"
 
-  use 'L3MON4D3/LuaSnip' -- Snippets plugin
-  use 'saadparwaiz1/cmp_luasnip'
+  use "L3MON4D3/LuaSnip" -- Snippets plugin
+  use "saadparwaiz1/cmp_luasnip"
 
-  use 'hrsh7th/cmp-nvim-lsp' -- Source nvim lsp
-  use 'hrsh7th/cmp-buffer'
-  use 'hrsh7th/cmp-path'
-  use 'hrsh7th/cmp-nvim-lua'
+  use "hrsh7th/cmp-nvim-lsp" -- Source nvim lsp
+  use "hrsh7th/cmp-buffer"
+  use "hrsh7th/cmp-path"
+  use "hrsh7th/cmp-nvim-lua"
   use "hrsh7th/cmp-cmdline"
   use "hrsh7th/nvim-cmp"
 
@@ -30,7 +32,7 @@ return require('packer').startup(function()
   use "folke/lsp-colors.nvim"
 
   -- Commit
-  use 'numToStr/Comment.nvim'
+  use "numToStr/Comment.nvim"
 
   -- Icons
   use "ryanoasis/vim-devicons"
@@ -43,12 +45,12 @@ return require('packer').startup(function()
 
   -- Git
   use "lewis6991/gitsigns.nvim"
-  use { 'TimUntersberger/neogit', requires = 'nvim-lua/plenary.nvim' }
+  use { "TimUntersberger/neogit", requires = "nvim-lua/plenary.nvim" }
 
   -- Telescope
   use {
-    'nvim-telescope/telescope.nvim',
-    requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
+    "nvim-telescope/telescope.nvim",
+    requires = {{"nvim-lua/popup.nvim"}, {"nvim-lua/plenary.nvim"}}
   }
   use {"nvim-telescope/telescope-node-modules.nvim"}
   use {"nvim-telescope/telescope-packer.nvim"}
@@ -88,7 +90,7 @@ return require('packer').startup(function()
   use "preservim/nerdtree"
   use "Xuyuanp/nerdtree-git-plugin"
   use "tiagofumo/vim-nerdtree-syntax-highlight"
-  use {'ray-x/navigator.lua', requires = {'ray-x/guihua.lua', run = 'cd lua/fzy && make'}}
+  use {"ray-x/navigator.lua", requires = {"ray-x/guihua.lua", run = "cd lua/fzy && make"}}
 
   use "prettier/vim-prettier"
   use "editorconfig/editorconfig-vim"

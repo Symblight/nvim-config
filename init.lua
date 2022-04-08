@@ -1,4 +1,4 @@
---require('at.libs')
+require('at.libs')
 
 require('at.plugins')
 require('at.settings')
