@@ -37,4 +37,8 @@ M.map("n", "<silent><C-k>",  "<cmd>Lspsaga signature_help<cr>")
 M.map("n", "<silent> gh",  "<cmd>Lspsaga lsp_finder<cr>")
 M.map("n", "<Space>rr",  "<cmd>lua require('lspsaga.rename').rename()<cr>")
 
+-- Gitsigns
+M.map("n", "<leader>tb", "<cmd>Gitsigns toggle_current_line_blame<cr>")
+M.map("n", "<leader>hp"  "<cmd>Gitsigns preview_hunk<cr>")
+
 return M

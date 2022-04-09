@@ -18,6 +18,8 @@ https://github.com/rockerBOO/awesome-neovim
 
 ### plugins hot keys
 
+`leader` = ','
+
 - `ctrl+S` = autocomplete
 - `ctrl+h` = docs
 - `K` = description
@@ -28,6 +30,16 @@ https://github.com/rockerBOO/awesome-neovim
 - `ctrl+w+S` = horizontal splitting
 - `ctrl+w+v` = vertical splitting
 - `ctrl+w+left/right/up/down` = switch between panels
+- `,tt` = toggle troubles
+- `,hp` = preview git change
+- `,tb` = toggle git line author
+
+# FZF
+
+BurntSushi/ripgrep is required for live_grep and grep_string
+
+- Rg: search word
+- Buffers: buffer list
 
 ## Comments by plugin
 
@@ -50,3 +62,10 @@ https://github.com/rockerBOO/awesome-neovim
 ## Telescope
 
 install FZF native for telescope
+
+# GIT
+
+:Commits - list commits
+:GFiles
+:Gitsigns preview_hunk - see git changes
+:Gitsigns toggle_current_line_blame - see author

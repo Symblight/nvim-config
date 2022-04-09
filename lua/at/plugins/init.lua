@@ -14,7 +14,12 @@ return require("packer").startup(function()
   use "lspcontainers/lspcontainers.nvim"
 
   use "rcarriga/nvim-notify"
-  use "hoob3rt/lualine.nvim"
+
+  -- Lualine
+  use  {
+  'nvim-lualine/lualine.nvim',
+  requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+}
 
   use "L3MON4D3/LuaSnip" -- Snippets plugin
   use "saadparwaiz1/cmp_luasnip"
