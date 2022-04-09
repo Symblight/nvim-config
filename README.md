@@ -65,7 +65,7 @@ install FZF native for telescope
 
 # GIT
 
-:Commits - list commits
-:GFiles
-:Gitsigns preview_hunk - see git changes
-:Gitsigns toggle_current_line_blame - see author
+- :Commits - list commits
+- :GFiles
+- :Gitsigns preview_hunk - see git changes
+- :Gitsigns toggle_current_line_blame - see author

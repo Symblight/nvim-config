@@ -26,8 +26,8 @@ M.map("n", "<Space>fb", "<cmd>lua require('telescope.builtin').file_browser()<cr
 
 -- Trouble
 M.map("n", "<leader>tt", "<cmd>TroubleToggle<cr>")
-M.map("n", "<leader>tw",  "<cmd>TroubleToggle lsp_workspace_diagnostics<cr>")
-M.map("n", "<leader>td", "<cmd>TroubleToggle lsp_document_diagnostics<cr>")
+M.map("n", "<leader>tw",  "<cmd>TroubleToggle workspace_diagnostics<cr>")
+M.map("n", "<leader>td", "<cmd>TroubleToggle document_diagnostics<cr>")
 M.map("n", "<leader>tq",  "<cmd>TroubleToggle quickfix<cr>")
 
 -- Saga
@@ -39,6 +39,6 @@ M.map("n", "<Space>rr",  "<cmd>lua require('lspsaga.rename').rename()<cr>")
 
 -- Gitsigns
 M.map("n", "<leader>tb", "<cmd>Gitsigns toggle_current_line_blame<cr>")
-M.map("n", "<leader>hp"  "<cmd>Gitsigns preview_hunk<cr>")
+M.map("n", "<leader>hp", "<cmd>Gitsigns preview_hunk<cr>")
 
 return M
