@@ -7,7 +7,7 @@ local on_attach = require("at.lsp.on-attach")
 require('at.lsp.tsserver')
 
 -- EFM-language-server
-require('at.lsp.efm')
+-- require('at.lsp.efm')
 
 -- Diagnostic language server
 require('at.lsp.diagnosticls')
@@ -37,17 +37,42 @@ nvim_lsp.rust_analyzer.setup {
   }
 }
 
+local lsp_status = require("lsp-status")
+lsp_status.register_progress()
+
 local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 capabilities.textDocument.completion.completionItem.snippetSupport = true
+capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities)
+capabilities = vim.tbl_extend("keep", capabilities or {}, lsp_status.capabilities)
 
 -- CSS
 nvim_lsp.cssls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
+
+
+-- CSS Modules
+nvim_lsp.cssmodules_ls.setup {
+  on_attach = on_attach,
   capabilities = capabilities,
 }
 
 -- HTML
 nvim_lsp.html.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
+
+-- Eslint
+nvim_lsp.eslint.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
+
+-- Docker
+nvim_lsp.dockerls.setup {
+  on_attach = on_attach,
   capabilities = capabilities,
 }
 
@@ -61,9 +86,16 @@ nvim_lsp.svelte.setup{
   }
 }
 
+-- Vue
+nvim_lsp.vuels.setup {
+  capabilities = capabilities,
+  on_attach = on_attach,
+}
+
 -- Bash
 nvim_lsp.bashls.setup {
-  on_attach = on_attach
+  capabilities = capabilities,
+  on_attach = on_attach,
 }
 
 --Ruby

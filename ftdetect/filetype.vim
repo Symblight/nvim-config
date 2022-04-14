@@ -7,3 +7,5 @@ au BufNewFile,BufRead Snapfile set ft=ruby
 au BufNewFile,BufRead Scanfile set ft=ruby
 
 au BufRead,BufNewFile *.svelte setfiletype svelte
+au BufRead,BufNewFile .env.* setfiletype sh
+

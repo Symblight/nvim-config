@@ -34,8 +34,8 @@ M.map("n", "<leader>tq",  "<cmd>TroubleToggle quickfix<cr>")
 M.map("n", "<silent><C-j>",  "<cmd>Lspsaga diagnostic_jump_next<cr>")
 M.map("n", "<silent>K",  "<cmd>Lspsaga hover_doc<cr>")
 M.map("n", "<silent><C-k>",  "<cmd>Lspsaga signature_help<cr>")
-M.map("n", "<silent> gh",  "<cmd>Lspsaga lsp_finder<cr>")
-M.map("n", "<Space>rr",  "<cmd>lua require('lspsaga.rename').rename()<cr>")
+M.map("n", "<silent>gh",  "<cmd>Lspsaga lsp_finder<cr>")
+M.map("n", "<silent>rr",  "<cmd>lua require('lspsaga.rename').rename()<cr>")
 
 -- Gitsigns
 M.map("n", "<leader>tb", "<cmd>Gitsigns toggle_current_line_blame<cr>")

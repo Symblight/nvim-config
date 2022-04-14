@@ -159,6 +159,11 @@ _G.packer_plugins = {
     path = "/Users/aleksejtkacenko/.local/share/nvim/site/pack/packer/start/lsp-colors.nvim",
     url = "https://github.com/folke/lsp-colors.nvim"
   },
+  ["lsp-status.nvim"] = {
+    loaded = true,
+    path = "/Users/aleksejtkacenko/.local/share/nvim/site/pack/packer/start/lsp-status.nvim",
+    url = "https://github.com/nvim-lua/lsp-status.nvim"
+  },
   ["lspcontainers.nvim"] = {
     loaded = true,
     path = "/Users/aleksejtkacenko/.local/share/nvim/site/pack/packer/start/lspcontainers.nvim",

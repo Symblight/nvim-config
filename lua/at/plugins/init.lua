@@ -12,7 +12,7 @@ return require("packer").startup(function()
   -- LSP
   use "neovim/nvim-lspconfig"
   use "lspcontainers/lspcontainers.nvim"
-
+  use 'nvim-lua/lsp-status.nvim'
   use "rcarriga/nvim-notify"
 
   -- Lualine
