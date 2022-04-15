@@ -36,21 +36,15 @@ nvim_lsp.rust_analyzer.setup {
     }
   }
 }
-
-local lsp_status = require("lsp-status")
-lsp_status.register_progress()
-
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
 capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities)
-capabilities = vim.tbl_extend("keep", capabilities or {}, lsp_status.capabilities)
 
 -- CSS
 nvim_lsp.cssls.setup {
   on_attach = on_attach,
   capabilities = capabilities,
 }
-
 
 -- CSS Modules
 nvim_lsp.cssmodules_ls.setup {
@@ -106,6 +100,11 @@ nvim_lsp.solargraph.setup {
 	}
 }
 
+-- YML 
+nvim_lsp.yamlls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
 
 -- icon
 vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
