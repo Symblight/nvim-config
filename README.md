@@ -2,7 +2,7 @@
 
 # Contents
 
-- vim (NeoVim 0.6.1) config
+- Neovim 0.7 config
 
 ### LSP servers
 
@@ -33,6 +33,13 @@ https://github.com/rockerBOO/awesome-neovim
 - `,tt` = toggle troubles
 - `,hp` = preview git change
 - `,tb` = toggle git line author
+
+### Size
+
+- `ctrl + w + >`
+- `ctrl + w + <`
+- `ctrl + w + +/-`
+- `ctrl + w + =` - reset
 
 # FZF
 

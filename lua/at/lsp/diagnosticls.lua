@@ -5,13 +5,14 @@ local root_pattern = require("lspconfig.util").root_pattern
 local on_attach = require('at.lsp.on-attach')
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
 
 nvim_lsp.diagnosticls.setup {
   capabilities = capabilities,
   on_attach = on_attach,
-  filetypes = {'javascript', 'javascriptreact', 'json', 'typescript', 'typescriptreact', 'css', 'less', 'scss', 'markdown', 'pandoc' },
+  filetypes = {'javascript', 'javascriptreact', 'json',  'css', 'less', 'scss', 'markdown', 'pandoc' },
   init_options = {
     linters = {
       eslint = {
