@@ -15,10 +15,10 @@ return {
   html = { prettier },
   javascript = { prettier, eslint },
   javascriptreact = { prettier, eslint },
+  typescriptreact = { prettier, eslint },
+  typescript = { prettier, eslint },
   json = { prettier },
   markdown = { prettier },
   scss = { prettier },
-  typescript = { prettier, eslint },
-  typescriptreact = { prettier, eslint },
   yaml = { prettier },
 }

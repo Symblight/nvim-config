@@ -12,10 +12,15 @@ require('at.lsp.tsserver')
 -- Diagnostic language server
 require('at.lsp.diagnosticls')
 
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+capabilities.textDocument.completion.completionItem.snippetSupport = true
+capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities)
+
 -- Setup servers
 local servers = { 'pyright' }
 for _, lsp in ipairs(servers) do
   nvim_lsp[lsp].setup {
+    capabilities = capabilities,
     on_attach = on_attach,
     flags = {
       debounce_text_changes = 150,
@@ -25,6 +30,7 @@ end
 
 nvim_lsp.rust_analyzer.setup {
   on_attach = on_attach,
+  capabilities = capabilities,
   flags = {
     debounce_text_changes = 150,
   },
@@ -36,9 +42,6 @@ nvim_lsp.rust_analyzer.setup {
     }
   }
 }
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities.textDocument.completion.completionItem.snippetSupport = true
-capabilities = require("cmp_nvim_lsp").update_capabilities(capabilities)
 
 -- CSS
 nvim_lsp.cssls.setup {
@@ -59,10 +62,10 @@ nvim_lsp.html.setup {
 }
 
 -- Eslint
-nvim_lsp.eslint.setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
-}
+-- nvim_lsp.eslint.setup {
+--   on_attach = on_attach,
+--   capabilities = capabilities,
+-- }
 
 -- Docker
 nvim_lsp.dockerls.setup {
