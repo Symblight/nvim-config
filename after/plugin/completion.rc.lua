@@ -5,7 +5,7 @@ vim.opt.completeopt= "menu,menuone,noselect"
 -- luasnip setup
 local luasnip = require 'luasnip'
 local lspkind = require 'lspkind'
-lspkind.init()
+-- lspkind.init()
 -- nvim-cmp setup
 local cmp = require 'cmp'
 
