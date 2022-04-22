@@ -30,15 +30,22 @@ M.map("n", "<leader>tw",  "<cmd>TroubleToggle workspace_diagnostics<cr>")
 M.map("n", "<leader>td", "<cmd>TroubleToggle document_diagnostics<cr>")
 M.map("n", "<leader>tq",  "<cmd>TroubleToggle quickfix<cr>")
 
--- Saga
-M.map("n", "<silent><C-j>",  "<cmd>Lspsaga diagnostic_jump_next<cr>")
-M.map("n", "<silent>K",  "<cmd>Lspsaga hover_doc<cr>")
-M.map("n", "<silent><C-k>",  "<cmd>Lspsaga signature_help<cr>")
-M.map("n", "<silent>gh",  "<cmd>Lspsaga lsp_finder<cr>")
-M.map("n", "<silent>rr",  "<cmd>lua require('lspsaga.rename').rename()<cr>")
-
 -- Gitsigns
 M.map("n", "<leader>tb", "<cmd>Gitsigns toggle_current_line_blame<cr>")
 M.map("n", "<leader>hp", "<cmd>Gitsigns preview_hunk<cr>")
+
+M.map("n", "<C-a>", "<cmd>:Neotree<cr>")
+M.map("n", "<C-t>", "<cmd>:NeoTreeClose<cr>")
+
+-- Moving line
+M.map("n", "<C-j>", "<cmd>m .+1<cr>==")
+M.map("n", "<C-k>", "<cmd>m .-2<cr>==")
+
+M.map("v", "<C-j>", "<cmd>m '>+1<cr>gv=gv")
+M.map("v", "<C-k>", "<cmd>m '<-2<cr>gv=gv")
+
+M.map("i", "<C-j>", "<Esc><cmd>m .+1<cr>==gi")
+M.map("i", "<C-k>", "<Esc><cmd>m .-2<cr>==gi")
+
 
 return M

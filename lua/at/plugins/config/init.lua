@@ -1,5 +1,5 @@
 -- Notify
-require('at.plugins.config.notify')
+-- require('at.plugins.config.notify')
 
 -- Package Info
 require('at.plugins.config.package-info')
@@ -30,4 +30,7 @@ require('at.plugins.config.autopairs')
 require('at.plugins.config.colorizer')
 
 -- Saga
-require('at.plugins.config.lspsaga')
+-- require('at.plugins.config.lspsaga')
+
+-- NeoTree
+require('at.plugins.config.neotree')

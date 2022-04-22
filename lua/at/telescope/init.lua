@@ -3,7 +3,7 @@ local actions = require("telescope.actions")
 
 telescope.load_extension("node_modules")
 --telescope.load_extension("packer")
-telescope.load_extension("notify")
+-- telescope.load_extension("notify")
 telescope.load_extension("fzy_native")
 
 require('telescope').setup{

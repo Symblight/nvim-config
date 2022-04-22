@@ -1,11 +1,18 @@
 require'nvim-treesitter.configs'.setup {
   highlight = {
     enable = true,
-    disable = {},
   },
   indent = {
-    enable = false,
-    disable = {},
+    enable = true,
+  },
+  incremental_selection = {
+    enable = true,
+    keymaps = {
+      init_selection = "gnn",
+      node_incremental = "grn",
+      scope_incremental = "grc",
+      node_decremental = "grm",
+    },
   },
   ensure_installed = {
     "tsx",
@@ -15,14 +22,18 @@ require'nvim-treesitter.configs'.setup {
     "javascript",
     "toml",
     "json",
+    "bash",
+    "dockerfile",
+    "jsdoc",
     "yaml",
     "html",
     "scss",
     "ruby",
     "css",
-    "scss"
+    "scss",
+    "lua"
   },
 }
 
-local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
+-- local parser_config = require "nvim-treesitter.parsers".get_parser_configs()
 

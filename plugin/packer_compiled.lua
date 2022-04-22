@@ -144,11 +144,6 @@ _G.packer_plugins = {
     path = "/Users/aleksejtkacenko/.local/share/nvim/site/pack/packer/start/gruvbox",
     url = "https://github.com/morhetz/gruvbox"
   },
-  ["guihua.lua"] = {
-    loaded = true,
-    path = "/Users/aleksejtkacenko/.local/share/nvim/site/pack/packer/start/guihua.lua",
-    url = "https://github.com/ray-x/guihua.lua"
-  },
   ["jsonc.vim"] = {
     loaded = true,
     path = "/Users/aleksejtkacenko/.local/share/nvim/site/pack/packer/start/jsonc.vim",
@@ -174,35 +169,20 @@ _G.packer_plugins = {
     path = "/Users/aleksejtkacenko/.local/share/nvim/site/pack/packer/start/lspkind-nvim",
     url = "https://github.com/onsails/lspkind-nvim"
   },
-  ["lspsaga.nvim"] = {
-    loaded = true,
-    path = "/Users/aleksejtkacenko/.local/share/nvim/site/pack/packer/start/lspsaga.nvim",
-    url = "https://github.com/glepnir/lspsaga.nvim"
-  },
   ["lualine.nvim"] = {
     loaded = true,
     path = "/Users/aleksejtkacenko/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
-  ["navigator.lua"] = {
+  ["neo-tree.nvim"] = {
     loaded = true,
-    path = "/Users/aleksejtkacenko/.local/share/nvim/site/pack/packer/start/navigator.lua",
-    url = "https://github.com/ray-x/navigator.lua"
+    path = "/Users/aleksejtkacenko/.local/share/nvim/site/pack/packer/start/neo-tree.nvim",
+    url = "https://github.com/nvim-neo-tree/neo-tree.nvim"
   },
   neogit = {
     loaded = true,
     path = "/Users/aleksejtkacenko/.local/share/nvim/site/pack/packer/start/neogit",
     url = "https://github.com/TimUntersberger/neogit"
-  },
-  nerdtree = {
-    loaded = true,
-    path = "/Users/aleksejtkacenko/.local/share/nvim/site/pack/packer/start/nerdtree",
-    url = "https://github.com/preservim/nerdtree"
-  },
-  ["nerdtree-git-plugin"] = {
-    loaded = true,
-    path = "/Users/aleksejtkacenko/.local/share/nvim/site/pack/packer/start/nerdtree-git-plugin",
-    url = "https://github.com/Xuyuanp/nerdtree-git-plugin"
   },
   ["nightfox.nvim"] = {
     loaded = true,
@@ -234,11 +214,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/aleksejtkacenko/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
-  },
-  ["nvim-notify"] = {
-    loaded = true,
-    path = "/Users/aleksejtkacenko/.local/share/nvim/site/pack/packer/start/nvim-notify",
-    url = "https://github.com/rcarriga/nvim-notify"
   },
   ["nvim-treesitter"] = {
     loaded = true,
@@ -334,11 +309,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/aleksejtkacenko/.local/share/nvim/site/pack/packer/start/vim-jsx-pretty",
     url = "https://github.com/maxmellon/vim-jsx-pretty"
-  },
-  ["vim-nerdtree-syntax-highlight"] = {
-    loaded = true,
-    path = "/Users/aleksejtkacenko/.local/share/nvim/site/pack/packer/start/vim-nerdtree-syntax-highlight",
-    url = "https://github.com/tiagofumo/vim-nerdtree-syntax-highlight"
   },
   ["vim-prettier"] = {
     loaded = true,

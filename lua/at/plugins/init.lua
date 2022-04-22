@@ -1,10 +1,11 @@
-local install_path = vim.fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
-if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
-  vim.cmd("!git clone https://github.com/wbthomason/packer.nvim " .. install_path)
+local fn = vim.fn
+local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
+if fn.empty(fn.glob(install_path)) > 0 then
+  packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
 end
 
 
-return require("packer").startup(function() 
+return require("packer").startup(function(use) 
   use {"wbthomason/packer.nvim"}
 
   use "folke/trouble.nvim"
@@ -13,7 +14,7 @@ return require("packer").startup(function()
   use "neovim/nvim-lspconfig"
   use "lspcontainers/lspcontainers.nvim"
   use 'nvim-lua/lsp-status.nvim'
-  use "rcarriga/nvim-notify"
+ -- use "rcarriga/nvim-notify"
 
   -- Lualine
   use  {
@@ -83,19 +84,22 @@ return require("packer").startup(function()
   -- CSS
   use {"hail2u/vim-css3-syntax"}
   use {
-  "norcalli/nvim-colorizer.lua",
-  config = function()
-    require "colorizer".setup()
-  end
+    "norcalli/nvim-colorizer.lua",
+    config = function()
+      require "colorizer".setup()
+    end
   }
 
-  use "glepnir/lspsaga.nvim"
-
   -- Tree files
-  use "preservim/nerdtree"
-  use "Xuyuanp/nerdtree-git-plugin"
-  use "tiagofumo/vim-nerdtree-syntax-highlight"
-  use {"ray-x/navigator.lua", requires = {"ray-x/guihua.lua", run = "cd lua/fzy && make"}}
+  use {
+  "nvim-neo-tree/neo-tree.nvim",
+    branch = "v2.x",
+    requires = { 
+      "nvim-lua/plenary.nvim",
+      "kyazdani42/nvim-web-devicons", -- not strictly required, but recommended
+      "MunifTanjim/nui.nvim",
+    }
+  }
 
   use "prettier/vim-prettier"
   use "editorconfig/editorconfig-vim"
@@ -113,4 +117,10 @@ return require("packer").startup(function()
   -- Rust
   use "rust-lang/rust.vim"
   use "cespare/vim-toml"
+
+  -- Automatically set up your configuration after cloning packer.nvim
+  -- Put this at the end after all plugins
+  if packer_bootstrap then
+    require('packer').sync()
+  end
 end)
