@@ -4,7 +4,7 @@ vim.wo.number = true
 vim.g.mapleader = ","
 
 vim.o.scrolloff = 7
-vim.o.guifont = "guifont=Monaco:h2"
+-- vim.o.guifont = "guifont=Monaco:h2"
 
 -- Indentation
 vim.opt.tabstop = 2
@@ -18,10 +18,13 @@ vim.opt.cursorline = true
 vim.opt.title = true
 vim.opt.hlsearch = true
 vim.opt.showcmd = true
+vim.opt.mouse = "a"
 
---vim.o.encoding = 'utf-8'
+--vim.o.encoding = ┃  26 vim.o.title = true
 vim.o.colorcolumn = '79'
 vim.o.mouse = 'a'
+vim.o.title = true
+
 
 vim.cmd('filetype plugin on')
 

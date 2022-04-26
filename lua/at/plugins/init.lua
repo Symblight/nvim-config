@@ -10,10 +10,6 @@ return require("packer").startup(function(use)
 
   use "folke/trouble.nvim"
 
-  -- LSP
-  use "neovim/nvim-lspconfig"
-  use "lspcontainers/lspcontainers.nvim"
-  use 'nvim-lua/lsp-status.nvim'
  -- use "rcarriga/nvim-notify"
 
   -- Lualine
@@ -21,6 +17,11 @@ return require("packer").startup(function(use)
   'nvim-lualine/lualine.nvim',
   requires = { 'kyazdani42/nvim-web-devicons', opt = true }
 }
+
+    -- LSP
+  use "neovim/nvim-lspconfig"
+  use "lspcontainers/lspcontainers.nvim"
+  use 'nvim-lua/lsp-status.nvim'
 
   use "L3MON4D3/LuaSnip" -- Snippets plugin
   use "saadparwaiz1/cmp_luasnip"

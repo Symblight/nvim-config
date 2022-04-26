@@ -62,10 +62,13 @@ nvim_lsp.html.setup {
 }
 
 -- Eslint
--- nvim_lsp.eslint.setup {
---   on_attach = on_attach,
---   capabilities = capabilities,
--- }
+nvim_lsp.eslint.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+}
+
+-- EslintFixAll command that can be used to format document on save
+vim.api.nvim_command('autocmd BufWritePre *.tsx,*.ts,*.jsx,*.js EslintFixAll')
 
 -- Docker
 nvim_lsp.dockerls.setup {
