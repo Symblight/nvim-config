@@ -255,6 +255,11 @@ _G.packer_plugins = {
     path = "/Users/aleksejtkacenko/.local/share/nvim/site/pack/packer/start/rust.vim",
     url = "https://github.com/rust-lang/rust.vim"
   },
+  ["telescope-file-browser.nvim"] = {
+    loaded = true,
+    path = "/Users/aleksejtkacenko/.local/share/nvim/site/pack/packer/start/telescope-file-browser.nvim",
+    url = "https://github.com/nvim-telescope/telescope-file-browser.nvim"
+  },
   ["telescope-fzy-native.nvim"] = {
     loaded = true,
     path = "/Users/aleksejtkacenko/.local/share/nvim/site/pack/packer/start/telescope-fzy-native.nvim",
@@ -314,6 +319,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/aleksejtkacenko/.local/share/nvim/site/pack/packer/start/vim-prettier",
     url = "https://github.com/prettier/vim-prettier"
+  },
+  ["vim-rooter"] = {
+    loaded = true,
+    path = "/Users/aleksejtkacenko/.local/share/nvim/site/pack/packer/start/vim-rooter",
+    url = "https://github.com/airblade/vim-rooter"
   },
   ["vim-svelte"] = {
     loaded = true,

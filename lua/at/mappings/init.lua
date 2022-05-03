@@ -17,12 +17,12 @@ function M.mapBuf(buf, mode, lhs, rhs, opts)
   vim.api.nvim_buf_set_keymap(buf, mode, lhs, rhs, options)
 end
  -- Telescope
-M.map("n", "<Space>ff", "<cmd>lua require('telescope.builtin').find_files()<cr>")
+M.map("n", "<Space>ff", "<cmd>lua require('telescope.builtin').find_files({ cwd = vim.fn.expand('%:p:h')})<cr>")
 M.map("n", "<Space>h", "<cmd>lua require('telescope.builtin').help_tags()<cr>")
 M.map("n", "<Space>c", "<cmd>lua require('telescope.builtin').colors()<cr>")
 M.map("n", "<Space>lg", "<cmd>Telescope live_grep<cr>")
 M.map("n", "<Space>b", "<cmd>Telescope buffers<cr>")
-M.map("n", "<Space>fb", "<cmd>lua require('telescope.builtin').file_browser()<cr>")
+M.map("n", "<Space>fb", "<cmd>Telescope file_browser<cr>")
 
 -- Trouble
 M.map("n", "<leader>tt", "<cmd>TroubleToggle<cr>")

@@ -21,6 +21,7 @@ vim.cmd("let g:gruvbox_bold=2")
 vim.cmd("let g:gruvbox_color_column='bg3'")
 vim.cmd("let g:gruvbox_color_column_fg='bg1'")
 vim.cmd("let g:gruvbox_color_column_bg='bg2'")
+vim.cmd("let g:airline_powerline_fonts = 2")
 vim.cmd("set background=dark")
 
 --vim.cmd("colorscheme nordfox")

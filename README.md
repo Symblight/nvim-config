@@ -21,6 +21,7 @@ https://github.com/rockerBOO/awesome-neovim
 `leader` = ','
 
 - `ctrl+S` = autocomplete
+- `ctrl+ca` = Lsp actions to fix
 - `ctrl+h` = docs
 - `K` = description
 - `Space + rr` = Rename

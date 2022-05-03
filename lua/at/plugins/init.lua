@@ -8,6 +8,8 @@ end
 return require("packer").startup(function(use) 
   use {"wbthomason/packer.nvim"}
 
+  use { "airblade/vim-rooter" }
+
   use "folke/trouble.nvim"
 
  -- use "rcarriga/nvim-notify"
@@ -62,6 +64,7 @@ return require("packer").startup(function(use)
   use {"nvim-telescope/telescope-node-modules.nvim"}
   use {"nvim-telescope/telescope-packer.nvim"}
   use {"nvim-telescope/telescope-fzy-native.nvim"}
+  use { "nvim-telescope/telescope-file-browser.nvim" }
 
   -- JSX/JS
   use "yuezk/vim-js"
