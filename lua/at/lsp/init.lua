@@ -65,6 +65,17 @@ nvim_lsp.html.setup {
 nvim_lsp.eslint.setup {
   on_attach = on_attach,
   capabilities = capabilities,
+  default_config = {
+    filetypes = {
+      'javascript',
+      'javascriptreact',
+      'javascript.jsx',
+      'typescript',
+      'typescriptreact',
+      'typescript.tsx',
+    },
+    root_dir = root_pattern('.eslintrc.json', '.eslintrc.js', 'package.json', 'tsconfig.json', '.git')
+  }
 }
 
 -- EslintFixAll command that can be used to format document on save
