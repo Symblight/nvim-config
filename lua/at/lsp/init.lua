@@ -74,7 +74,7 @@ nvim_lsp.eslint.setup {
       'typescriptreact',
       'typescript.tsx',
     },
-    root_dir = root_pattern('.eslintrc.json', '.eslintrc.js', 'package.json', 'tsconfig.json', '.git')
+    root_dir = root_pattern('.eslintrc.json', '.eslintrc.js', '.git')
   }
 }
 
