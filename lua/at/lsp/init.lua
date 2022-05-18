@@ -65,18 +65,9 @@ nvim_lsp.html.setup {
 nvim_lsp.eslint.setup {
   on_attach = on_attach,
   capabilities = capabilities,
-  default_config = {
-    filetypes = {
-      'javascript',
-      'javascriptreact',
-      'javascript.jsx',
-      'typescript',
-      'typescriptreact',
-      'typescript.tsx',
-    },
-    root_dir = root_pattern('.eslintrc.json', '.eslintrc.js', '.git')
-  }
+  root_dir = root_pattern('.eslintrc.json', '.eslintrc.js', '.git', '.eslintrc')
 }
+
 
 -- EslintFixAll command that can be used to format document on save
 vim.api.nvim_command('autocmd BufWritePre *.tsx,*.ts,*.jsx,*.js EslintFixAll')

@@ -80,4 +80,4 @@ map gp :bp<cr>
 map gw :Bclose<cr>)
 
 
-let g:rooter_patterns = ['.git', '.svn', 'package.json', '!node_modules']
+let g:rooter_patterns = ['.git', '.svn']
