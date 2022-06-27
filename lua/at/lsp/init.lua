@@ -72,6 +72,15 @@ nvim_lsp.eslint.setup {
 -- EslintFixAll command that can be used to format document on save
 vim.api.nvim_command('autocmd BufWritePre *.tsx,*.ts,*.jsx,*.js EslintFixAll')
 
+-- nvim_lsp.stylelint_lsp.setup{
+--   settings = {
+--     stylelintplus = {
+--       autoFixOnSave = true,
+--       autoFixOnFormat = true,
+--     }
+--   }
+-- }
+
 -- Docker
 nvim_lsp.dockerls.setup {
   on_attach = on_attach,

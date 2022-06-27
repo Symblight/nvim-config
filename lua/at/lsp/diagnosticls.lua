@@ -37,6 +37,26 @@ nvim_lsp.diagnosticls.setup {
           [0] = 'info',
         }
       },
+      stylelint = {
+        sourceName = 'stylelint',
+        command = 'stylelint',
+        args = {'--formatter', 'compact', '%filepath'},
+        rootPatterns = {'.stylelintrc'},
+        debounce = 100,
+        formatPattern = {
+          [[: line (\d+), col (\d+), (warning|error) - (.+?) \((.+)\)]],
+          {
+            line = 1,
+            column = 2,
+            security = 3,
+            message = {4, ' [', 5, ']'},
+          },
+        },
+        securities = {
+          warning = 'warning',
+          error = 'error',
+        },
+      },
     },
     filetypes = {
       javascript = 'eslint',
