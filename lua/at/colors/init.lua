@@ -5,7 +5,7 @@
 --   colors = {hint = "orange", error = "#ff0000"}
 -- })
 
-vim.cmd("colorscheme OceanicNext")
+--vim.cmd("colorscheme OceanicNext")
 vim.cmd("syntax on")
 
 vim.cmd("let g:oceanic_next_terminal_bold = 1")
