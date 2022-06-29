@@ -40,9 +40,6 @@ return require("packer").startup(function(use)
 
   use "folke/lsp-colors.nvim"
 
-  -- Commit
-  use "numToStr/Comment.nvim"
-
   -- Icons
   use "ryanoasis/vim-devicons"
   use "kyazdani42/nvim-web-devicons"
@@ -51,8 +48,6 @@ return require("packer").startup(function(use)
 
   -- Git
   use "lewis6991/gitsigns.nvim"
-  use { "TimUntersberger/neogit", requires = "nvim-lua/plenary.nvim" }
-  use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
 
   -- Telescope
   use {
@@ -78,9 +73,7 @@ return require("packer").startup(function(use)
   use { "junegunn/fzf.vim" }
 
   -- Colorshemas
-  use "projekt0n/github-nvim-theme"
   use "morhetz/gruvbox"
-  use "mhartington/oceanic-next"
   use "EdenEast/nightfox.nvim"
 
   -- CSS
@@ -104,13 +97,6 @@ return require("packer").startup(function(use)
   }
 
   use "prettier/vim-prettier"
-  use "editorconfig/editorconfig-vim"
-
-  -- Packages npm/yarn
-  use({
-  "vuki656/package-info.nvim",
-  requires = "MunifTanjim/nui.nvim",
-  })
 
   -- JSON
   use "elzr/vim-json"
