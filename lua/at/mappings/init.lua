@@ -34,7 +34,7 @@ M.map("n", "<leader>tq",  "<cmd>TroubleToggle quickfix<cr>")
 M.map("n", "<leader>tb", "<cmd>Gitsigns toggle_current_line_blame<cr>")
 M.map("n", "<leader>hp", "<cmd>Gitsigns preview_hunk<cr>")
 
-M.map("n", "<C-a>", "<cmd>:Neotree<cr>")
+M.map("n", "<C-a>", "<cmd>:Vexplore<cr>")
 M.map("n", "<C-t>", "<cmd>:NeoTreeClose<cr>")
 
 -- Moving line

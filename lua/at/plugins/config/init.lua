@@ -17,5 +17,3 @@ require('at.plugins.config.autopairs')
 
 require('at.plugins.config.colorizer')
 
--- NeoTree
-require('at.plugins.config.neotree')
