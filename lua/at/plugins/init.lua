@@ -12,8 +12,6 @@ return require("packer").startup(function(use)
 
   use "folke/trouble.nvim"
 
- -- use "rcarriga/nvim-notify"
-
   -- Lualine
   use  {
   'nvim-lualine/lualine.nvim',
@@ -41,9 +39,9 @@ return require("packer").startup(function(use)
   use "folke/lsp-colors.nvim"
 
   -- Icons
-  use "ryanoasis/vim-devicons"
   use "kyazdani42/nvim-web-devicons"
 
+  -- Treesitter
   use "nvim-treesitter/nvim-treesitter"
 
   -- Git
@@ -59,7 +57,7 @@ return require("packer").startup(function(use)
   use {"nvim-telescope/telescope-fzy-native.nvim"}
   use { "nvim-telescope/telescope-file-browser.nvim" }
 
-  --Tree files
+  -- Aside bar
   use "preservim/nerdtree"
   use "Xuyuanp/nerdtree-git-plugin"
   use "tiagofumo/vim-nerdtree-syntax-highlight"
@@ -71,7 +69,6 @@ return require("packer").startup(function(use)
   -- Svelte
   use "evanleck/vim-svelte"
   use "pangloss/vim-javascript"
-  use "HerringtonDarkholme/yats.vim"
 
   -- FZF
   use { "junegunn/fzf", run = "./install --all" }
@@ -79,7 +76,7 @@ return require("packer").startup(function(use)
 
   -- Colorshemas
   use "morhetz/gruvbox"
-  use "EdenEast/nightfox.nvim"
+  -- use "EdenEast/nightfox.nvim"
 
   -- CSS
   use {"hail2u/vim-css3-syntax"}
@@ -90,6 +87,7 @@ return require("packer").startup(function(use)
     end
   }
 
+  -- Formatters
   use "prettier/vim-prettier"
 
   -- JSON

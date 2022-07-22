@@ -65,7 +65,7 @@ nvim_lsp.html.setup {
 nvim_lsp.eslint.setup {
   on_attach = on_attach,
   capabilities = capabilities,
-  root_dir = root_pattern('.eslintrc.json', '.eslintrc.js', '.git', '.eslintrc')
+  --root_dir = root_pattern('.eslintrc.json', '.eslintrc.js', '.git', '.eslintrc', '')
 }
 
 
