@@ -57,11 +57,6 @@ return require("packer").startup(function(use)
   use {"nvim-telescope/telescope-fzy-native.nvim"}
   use { "nvim-telescope/telescope-file-browser.nvim" }
 
-  -- Aside bar
-  use "preservim/nerdtree"
-  use "Xuyuanp/nerdtree-git-plugin"
-  use "tiagofumo/vim-nerdtree-syntax-highlight"
-
   -- JSX/JS
   use "yuezk/vim-js"
   use "maxmellon/vim-jsx-pretty"

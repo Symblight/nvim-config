@@ -50,4 +50,4 @@ end
 vim.api.nvim_set_keymap('n', ',<space>', ':nohlsearch<CR>', {noremap = true})
 
 vim.cmd 'source ~/.config/nvim/lua/at/settings/buffers.vim'
-
+vim.cmd 'source ~/.config/nvim/lua/at/settings/settings.vim'
