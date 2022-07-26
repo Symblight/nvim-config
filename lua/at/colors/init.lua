@@ -21,6 +21,7 @@ vim.cmd("let g:gruvbox_bold=2")
 vim.cmd("let g:gruvbox_color_column='bg3'")
 vim.cmd("let g:gruvbox_color_column_fg='bg1'")
 vim.cmd("let g:gruvbox_color_column_bg='bg2'")
+vim.cmd("let g:gruvbox_transparent_bg = 0.5")
 vim.cmd("let g:airline_powerline_fonts = 2")
 
 

@@ -1,7 +1,7 @@
 local vim = vim
 
 vim.wo.number = true
-vim.wo.relativenumber = false 
+vim.wo.relativenumber = true 
 vim.wo.signcolumn = 'auto'
 vim.wo.numberwidth = 2
 vim.g.mapleader = ","

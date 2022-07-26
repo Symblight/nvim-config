@@ -1,12 +1,11 @@
 command! -bang -complete=buffer -nargs=? Bclose call <SID>Bclose(<q-bang>, <q-args>)
 nnoremap <silent> <Leader>bd :Bclose<CR>
 
-
 map gn :bn<cr>
 map gp :bp<cr>
 map gw :Bclose<cr>)
-
-
+hi Normal guibg=NONE ctermbg=NONE
+autocmd VimEnter * hi Normal ctermbg=NONE guibg=NONE
 let g:rooter_patterns = ['.git', '.svn']
 let g:netrw_liststyle = 4
 "let g:netrw_banner = 0
