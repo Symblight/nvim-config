@@ -18,4 +18,21 @@ let g:netrw_liststyle = 4
 "let g:netrw_winsize = 25
 let g:netrw_altv = 1
 let g:netrw_keepdir=0
+" Disable arrows keys
+nnoremap <left> :echo "no left for you!"<cr>
+vnoremap <left> :<c-u>echo "no left for you!"<cr>
+inoremap <left> <c-o>:echo "no left for you!"<cr>
+
+nnoremap <right> :echo "no right for you!"<cr>
+vnoremap <right> :<c-u>echo "no right for you!"<cr>
+inoremap <right> <c-o>:echo "no right for you!"<cr>
+
+
+nnoremap <up> :echo "no up for you!"<cr>
+vnoremap <up> :<c-u>echo "no up for you!"<cr>
+inoremap <up> <c-o>:echo "no up for you!"<cr>
+
+nnoremap <down> :echo "no down for you!"<cr>
+vnoremap <down> :<c-u>echo "no down for you!"<cr>
+inoremap <down> <c-o>:echo "no down for you!"<cr>
 
