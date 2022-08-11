@@ -71,7 +71,6 @@ return require("packer").startup(function(use)
 
   -- Colorshemas
   use "morhetz/gruvbox"
-  -- use "EdenEast/nightfox.nvim"
 
   -- CSS
   use {"hail2u/vim-css3-syntax"}
@@ -87,7 +86,6 @@ return require("packer").startup(function(use)
 
   -- JSON
   use "elzr/vim-json"
-  use "neoclide/jsonc.vim"
 
   -- Rust
   use "rust-lang/rust.vim"
