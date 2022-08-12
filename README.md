@@ -34,6 +34,7 @@ https://github.com/rockerBOO/awesome-neovim
 - `,tt` = toggle troubles
 - `,hp` = preview git change
 - `,tb` = toggle git line author
+- `cs"'` = replace " to '
 
 ### Size
 

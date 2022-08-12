@@ -14,9 +14,12 @@ return require("packer").startup(function(use)
 
   -- Lualine
   use  {
-  'nvim-lualine/lualine.nvim',
-  requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-}
+    'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
+
+  -- []""()
+  use "tpope/vim-surround"
 
     -- LSP
   use "neovim/nvim-lspconfig"
