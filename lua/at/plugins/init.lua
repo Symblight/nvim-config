@@ -74,6 +74,8 @@ return require("packer").startup(function(use)
 
   -- Colorshemas
   use "morhetz/gruvbox"
+  use "nanotech/jellybeans.vim"
+  use "habamax/vim-gruvbit"
 
   -- CSS
   use {"hail2u/vim-css3-syntax"}

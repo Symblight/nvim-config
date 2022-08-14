@@ -23,8 +23,7 @@ vim.opt.hlsearch = true
 vim.opt.showcmd = true
 vim.opt.mouse = "a"
 
---vim.o.encoding = ┃  26 
-vim.o.colorcolumn = '79'
+vim.o.colorcolumn = '0'
 vim.o.mouse = 'a'
 vim.o.title = true
 
