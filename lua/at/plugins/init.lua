@@ -70,12 +70,15 @@ return require("packer").startup(function(use)
   use { "nvim-telescope/telescope-file-browser.nvim" }
 
   -- JSX/JS
-  use "yuezk/vim-js"
   use "maxmellon/vim-jsx-pretty"
+  use "pangloss/vim-javascript"
+  use { "styled-components/vim-styled-components" , branch =  'main' }
+  -- TSX/TS
+  use "peitalin/vim-jsx-typescript"
+  use "leafgarland/typescript-vim"
 
   -- Svelte
   use "evanleck/vim-svelte"
-  use "pangloss/vim-javascript"
 
   -- FZF
   use { "junegunn/fzf", run = "./install --all" }
@@ -84,7 +87,7 @@ return require("packer").startup(function(use)
   -- Colorshemas
   use "morhetz/gruvbox"
   use "nanotech/jellybeans.vim"
-  use "habamax/vim-gruvbit"
+  use "jaredgorski/SpaceCamp"
 
   -- CSS
   use {"hail2u/vim-css3-syntax"}
