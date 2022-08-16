@@ -12,6 +12,7 @@ let g:airline_powerline_fonts =1
 "colorscheme gruvbox
 colorscheme jellybeans
 " colorscheme spacecamp
+" colorscheme vividchalk
 
 " let g:jellybeans_use_lowcolor_black = 1
 set background=dark
@@ -20,19 +21,20 @@ hi Comment gui=italic
 hi htmlArg gui=italic
 
 " Highlighted number color
-hi CursorLineNR guifg=#fbc531 
+hi CursorLineNR guifg=#fbc531
 
 highlight Normal ctermbg=black ctermfg=white
 
 " Numbers column
-highlight LineNr guifg=grey 
+highlight LineNr guifg=grey
 
 highlight SignColumn guibg=#2d3436 " Git column
 
 set termguicolors
 syntax on
-let s:t_Co = exists('&t_Co') && !empty(&t_Co) && &t_Co > 1 ? &t_Co : 2 
+let s:t_Co = exists('&t_Co') && !empty(&t_Co) && &t_Co > 1 ? &t_Co : 2
 " Transparent
+"
 " hi Normal guibg=NONE ctermbg=NONE
 " autocmd VimEnter * hi Normal ctermbg=NONE guibg=NONE
 

@@ -17,10 +17,6 @@ return require("packer").startup(function(use)
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
-
-  -- []""()
-  use "tpope/vim-surround"
-
   -- TREE files
   use {
   'kyazdani42/nvim-tree.lua',
@@ -49,6 +45,14 @@ return require("packer").startup(function(use)
   use "onsails/lspkind-nvim"
 
   use "folke/lsp-colors.nvim"
+
+  -- Comments
+  use "tpope/vim-commentary"
+  -- Trim free space
+  use "csexton/trailertrash.vim"
+  -- []""()
+  use "tpope/vim-surround"
+
 
   -- Icons
   use "kyazdani42/nvim-web-devicons"
@@ -88,6 +92,7 @@ return require("packer").startup(function(use)
   use "morhetz/gruvbox"
   use "nanotech/jellybeans.vim"
   use "jaredgorski/SpaceCamp"
+  use "tpope/vim-vividchalk"
 
   -- CSS
   use {"hail2u/vim-css3-syntax"}

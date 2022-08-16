@@ -28,13 +28,26 @@ https://github.com/rockerBOO/awesome-neovim
 - `space+ff` = telescope
 - `gr` = search all cases
 - `ctrl+a` = open tree files
+
+### Windows
+
 - `ctrl+w+S` = horizontal splitting
 - `ctrl+w+v` = vertical splitting
 - `ctrl+w+left/right/up/down` = switch between panels
+
 - `,tt` = toggle troubles
+
+### Git
+
 - `,hp` = preview git change
 - `,tb` = toggle git line author
+
+### Surround
+
 - `cs"'` = replace " to '
+- `ds` = delete surround
+- `ysiW"` = "Hello world!" or <span>Hello world!</span>
+- `yss` = The line
 
 ### Size
 
