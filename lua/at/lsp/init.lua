@@ -117,10 +117,26 @@ nvim_lsp.solargraph.setup {
 	}
 }
 
--- YML 
+-- YML
 nvim_lsp.yamlls.setup {
   on_attach = on_attach,
   capabilities = capabilities,
+}
+
+-- Go
+nvim_lsp.gopls.setup {
+  on_attach = on_attach,
+  cmd = {"gopls", "serve"},
+  filetypes = {"go", "gomod"},
+  root_dir = root_pattern("go.work", "go.mod", ".git"),
+  settings = {
+    gopls = {
+      analyses = {
+        unusedparams = true,
+      },
+      staticcheck = true,
+    },
+  },
 }
 
 -- icon

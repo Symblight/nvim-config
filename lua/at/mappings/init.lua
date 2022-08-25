@@ -2,6 +2,8 @@ local vim = vim
 local api = vim.api
 local M = {}
 
+local gitBlame = require("at.git")
+
 function M.map(mode, lhs, rhs, opts)
   local options = {noremap = true, silent = true}
   if opts then
@@ -33,9 +35,10 @@ M.map("n", "<leader>tq",  "<cmd>TroubleToggle quickfix<cr>")
 M.map("n", "<leader>tb", "<cmd>Gitsigns toggle_current_line_blame<cr>")
 M.map("n", "<leader>hp", "<cmd>Gitsigns preview_hunk<cr>")
 
+-- M.map("n", "<leader>gb", "<cmd>GitBlame<cr>")
+
 -- Tree files
---M.map("n", "<C-a>", "<cmd>:NERDTreeToggle<cr>")
--- M.map("n", "<C-t>", "<cmd>:NERDTreeFind<cr>")
+M.map("n", "<C-a>", "<cmd>:NvimTreeToggle<cr>")
 
 -- Moving line
 M.map("n", "<C-j>", "<cmd>m .+1<cr>==")
