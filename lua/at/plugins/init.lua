@@ -109,6 +109,9 @@ return require("packer").startup(function(use)
   -- JSON
   use "elzr/vim-json"
 
+  -- CSV
+  use "chrisbra/csv.vim"
+
   -- Rust
   use "rust-lang/rust.vim"
   use "cespare/vim-toml"

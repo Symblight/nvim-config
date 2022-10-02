@@ -10,7 +10,7 @@ capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
 nvim_lsp.tsserver.setup {
     on_attach = function(client, bf)
-        client.resolved_capabilities.document_formatting = false
+        client.server_capabilities.documentFormattingProvider = false
         on_attach(client, bf)
     end,
     capabilities = capabilities,

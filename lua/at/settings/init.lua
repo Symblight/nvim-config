@@ -1,7 +1,7 @@
 local vim = vim
 
 vim.wo.number = true
-vim.wo.relativenumber = true 
+vim.wo.relativenumber = true
 vim.wo.signcolumn = 'auto'
 vim.wo.numberwidth = 2
 vim.g.mapleader = ","
@@ -26,6 +26,7 @@ vim.opt.mouse = "a"
 vim.o.colorcolumn = '0'
 vim.o.mouse = 'a'
 vim.o.title = true
+vim.o.winbar = "%f"
 
 
 vim.cmd('filetype plugin on')
