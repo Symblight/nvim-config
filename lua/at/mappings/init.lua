@@ -23,7 +23,7 @@ M.map("n", "<Space>ff", "<cmd>lua require('telescope.builtin').find_files({ cwd 
 M.map("n", "<Space>h", "<cmd>lua require('telescope.builtin').help_tags()<cr>")
 M.map("n", "<Space>lg", "<cmd>Telescope live_grep<cr>")
 M.map("n", "<Space>b", "<cmd>Telescope buffers<cr>")
-M.map("n", "<Space>fb", "<cmd>Telescope file_browser<cr>")
+M.map("n", "<Space>fb", "<cmd>Telescope file_browser hidden=true<cr>")
 
 -- Trouble
 M.map("n", "<leader>tt", "<cmd>TroubleToggle<cr>")

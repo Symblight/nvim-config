@@ -30,7 +30,6 @@ highlight LineNr guifg=grey
 
 highlight SignColumn guibg=#2d3436 " Git column
 
-set termguicolors
 syntax on
 let s:t_Co = exists('&t_Co') && !empty(&t_Co) && &t_Co > 1 ? &t_Co : 2
 " Transparent
