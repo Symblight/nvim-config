@@ -63,14 +63,9 @@ nvim_lsp.html.setup {
 
 -- Eslint
 nvim_lsp.eslint.setup {
-  on_attach = on_attach,
   capabilities = capabilities,
-  --root_dir = root_pattern('.eslintrc.json', '.eslintrc.js', '.git', '.eslintrc', '')
+  flags = { debounce_text_changes = 500 },
 }
-
-
--- EslintFixAll command that can be used to format document on save
-vim.api.nvim_command('autocmd BufWritePre *.tsx,*.ts,*.jsx,*.js EslintFixAll')
 
 -- nvim_lsp.stylelint_lsp.setup{
 --   settings = {

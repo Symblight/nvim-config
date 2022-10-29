@@ -28,7 +28,6 @@ vim.o.mouse = 'a'
 vim.o.title = true
 vim.o.winbar = "%f"
 
-
 vim.cmd('filetype plugin on')
 
 vim.opt.wildignore = {'*/cache/*', '*/tmp/*'}

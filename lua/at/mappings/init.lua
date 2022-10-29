@@ -38,7 +38,7 @@ M.map("n", "<leader>hp", "<cmd>Gitsigns preview_hunk<cr>")
 -- M.map("n", "<leader>gb", "<cmd>GitBlame<cr>")
 
 -- Tree files
-M.map("n", "<C-a>", "<cmd>:NvimTreeToggle<cr>")
+-- M.map("n", "<C-a>", "<cmd>:NvimTreeToggle<cr>")
 
 -- Moving line
 M.map("n", "<C-j>", "<cmd>m .+1<cr>==")
