@@ -17,3 +17,5 @@ require('at.plugins.config.colorizer')
 require('at.plugins.config.tree')
 
 -- require('at.plugins.config.diffview')
+
+require('at.plugins.config.todo')

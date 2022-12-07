@@ -18,12 +18,14 @@ return require("packer").startup(function(use)
   }
   -- TREE files
   use {
-  'kyazdani42/nvim-tree.lua',
-  requires = {
-    'kyazdani42/nvim-web-devicons', -- optional, for file icons
-  },
-  tag = 'nightly' -- optional, updated every week. (see issue #1193)
-}
+    'kyazdani42/nvim-tree.lua',
+    requires = {
+      'kyazdani42/nvim-web-devicons', -- optional, for file icons
+    },
+    tag = 'nightly' -- optional, updated every week. (see issue #1193)
+  }
+
+  use 'folke/todo-comments.nvim'
 
     -- LSP
   use "neovim/nvim-lspconfig"
@@ -51,6 +53,9 @@ return require("packer").startup(function(use)
   use "csexton/trailertrash.vim"
   -- []""()
   use "tpope/vim-surround"
+
+  -- Lit template
+  use "jonsmithers/vim-html-template-literals"
 
 
   -- Icons
