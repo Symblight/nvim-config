@@ -2,7 +2,7 @@
 
 # Contents
 
-- Neovim 0.7 config
+- Neovim 0.8.2 config
 
 ### LSP servers
 

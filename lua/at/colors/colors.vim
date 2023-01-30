@@ -9,8 +9,8 @@ let g:gruvbox_color_column_bg='bg2'
 let g:gruvbox_transparent_bg = 0.5
 let g:airline_powerline_fonts =1
 
-"colorscheme gruvbox
-colorscheme jellybeans
+colorscheme gruvbox
+"colorscheme jellybeans
 " colorscheme spacecamp
 " colorscheme vividchalk
 
@@ -34,6 +34,6 @@ syntax on
 let s:t_Co = exists('&t_Co') && !empty(&t_Co) && &t_Co > 1 ? &t_Co : 2
 " Transparent
 "
-" hi Normal guibg=NONE ctermbg=NONE
-" autocmd VimEnter * hi Normal ctermbg=NONE guibg=NONE
+hi Normal guibg=NONE ctermbg=NONE
+autocmd VimEnter * hi Normal ctermbg=NONE guibg=NONE
 
