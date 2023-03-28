@@ -57,6 +57,8 @@ return require("packer").startup(function(use)
   -- Lit template
   use "jonsmithers/vim-html-template-literals"
 
+  -- PRISMA
+  use "prisma/vim-prisma"
 
   -- Icons
   use "kyazdani42/nvim-web-devicons"
@@ -98,9 +100,11 @@ return require("packer").startup(function(use)
   use "nanotech/jellybeans.vim"
   use "jaredgorski/SpaceCamp"
   use "tpope/vim-vividchalk"
+  use "ayu-theme/ayu-vim"
+  use "tomasr/molokai"
+  use "sainnhe/sonokai"
 
   -- CSS
-  use {"hail2u/vim-css3-syntax"}
   use {
     "norcalli/nvim-colorizer.lua",
     config = function()
