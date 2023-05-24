@@ -62,10 +62,10 @@ nvim_lsp.html.setup {
 }
 
 -- Eslint
-nvim_lsp.eslint.setup {
-  capabilities = capabilities,
-  flags = { debounce_text_changes = 500 },
-}
+-- nvim_lsp.eslint.setup {
+--   capabilities = capabilities,
+--   flags = { debounce_text_changes = 500 },
+-- }
 
 -- nvim_lsp.stylelint_lsp.setup{
 --   settings = {
