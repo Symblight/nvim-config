@@ -2,7 +2,7 @@
 
 # Contents
 
-- Neovim 0.8.2 config
+- Neovim 0.9 config
 
 ### LSP servers
 
@@ -28,6 +28,7 @@ https://github.com/rockerBOO/awesome-neovim
 - `space+ff` = telescope
 - `gr` = search all cases
 - `ctrl+a` = open tree files
+- `viw*` = search hightlighted word (n - bottom, N- top movement)
 
 ### Windows
 
