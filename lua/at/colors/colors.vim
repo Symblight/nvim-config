@@ -19,16 +19,16 @@ endif
 
 " let g:jellybeans_use_lowcolor_black = 1
 " let g:jellybeans_background_color= 'none'
-" colorscheme jellybeans
+ " colorscheme jellybeans
 
 "
-set background=dark
-colorscheme gruvbox
+" set background=dark
+" colorscheme gruvbox
 
 
-" let g:rehash256 = 1
-" let g:molokai_original =4
-" colorscheme molokai
+let g:rehash256 = 1
+let g:molokai_original =4
+colorscheme molokai
 
 
 let g:sonokai_style = 'maia'

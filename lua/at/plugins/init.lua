@@ -16,16 +16,6 @@ return require("packer").startup(function(use)
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
   }
-  -- TREE files
-  use {
-    'kyazdani42/nvim-tree.lua',
-    requires = {
-      'kyazdani42/nvim-web-devicons', -- optional, for file icons
-    },
-    tag = 'nightly' -- optional, updated every week. (see issue #1193)
-  }
-
-  use 'folke/todo-comments.nvim'
 
     -- LSP
   use "neovim/nvim-lspconfig"
@@ -57,9 +47,6 @@ return require("packer").startup(function(use)
   -- Lit template
   use "jonsmithers/vim-html-template-literals"
 
-  -- PRISMA
-  use "prisma/vim-prisma"
-
   -- Icons
   use "kyazdani42/nvim-web-devicons"
 
@@ -68,9 +55,6 @@ return require("packer").startup(function(use)
 
   -- Git
   use "lewis6991/gitsigns.nvim"
-  use "tpope/vim-fugitive"
-  use "nvim-lua/plenary.nvim"
-  use "sindrets/diffview.nvim"
 
   -- Telescope
   use {
@@ -107,21 +91,12 @@ return require("packer").startup(function(use)
   use "sainnhe/sonokai"
 
   -- CSS
-  use {
-    "norcalli/nvim-colorizer.lua",
-    config = function()
-      require "colorizer".setup()
-    end
-  }
 
   -- Formatters
   use "prettier/vim-prettier"
 
   -- JSON
   use "elzr/vim-json"
-
-  -- CSV
-  use "chrisbra/csv.vim"
 
   -- Rust
   use "rust-lang/rust.vim"
