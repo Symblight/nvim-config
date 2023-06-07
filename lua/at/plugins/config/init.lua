@@ -18,4 +18,3 @@ require('at.plugins.config.autopairs')
 
 -- require('at.plugins.config.diffview')
 
-require('at.plugins.config.todo')
