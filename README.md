@@ -2,7 +2,7 @@
 
 # Contents
 
-- Neovim 0.9 config
+- Neovim 0.9.1 config
 
 ### LSP servers
 
