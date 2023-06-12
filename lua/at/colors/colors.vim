@@ -9,16 +9,11 @@ let g:gruvbox_color_column_bg='bg2'
 let g:gruvbox_transparent_bg = 0.5
 let g:airline_powerline_fonts =1
 
-
-if has('termguicolors')
-   set termguicolors
-endif
-
 " colorscheme spacecamp
 " colorscheme vividchalk
 
-" let g:jellybeans_use_lowcolor_black = 1
-" let g:jellybeans_background_color= 'none'
+let g:jellybeans_use_lowcolor_black = 1
+let g:jellybeans_background_color= 'none'
  " colorscheme jellybeans
 
 "
@@ -28,7 +23,7 @@ endif
 
 let g:rehash256 = 1
 let g:molokai_original =4
-colorscheme molokai
+" colorscheme molokai
 
 
 let g:sonokai_style = 'maia'
@@ -39,7 +34,7 @@ let g:sonokai_enable_italic = 1
 let g:sonokai_dim_inactive_windows = 1
 let g:sonokai_menu_selection_background = 'green'
 let g:sonokai_diagnostic_line_highlight = 1
-" colorscheme sonokai
+colorscheme sonokai
 
 hi Comment gui=italic
 hi htmlArg gui=italic
