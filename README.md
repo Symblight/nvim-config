@@ -30,6 +30,10 @@ https://github.com/rockerBOO/awesome-neovim
 - `ctrl+a` = open tree files
 - `viw*` = search hightlighted word (n - bottom, N- top movement)
 
+### replace
+
+- `:%s/foo/bar/g` = replace 'foo' to 'bar'
+
 ### Windows
 
 - `ctrl+w+S` = horizontal splitting
@@ -77,11 +81,6 @@ BurntSushi/ripgrep is required for live_grep and grep_string
 - `gb` - Toggles the region using blockwise comment
 - `g<` - Uncomments
 
-### Copilot
-
-- Tab apply code
-- :Colipot setup
-
 ## Telescope
 
 install FZF native for telescope
@@ -92,3 +91,8 @@ install FZF native for telescope
 - :GFiles
 - :Gitsigns preview_hunk - see git changes
 - :Gitsigns toggle_current_line_blame - see author
+
+## Reload config
+
+- `:ReloadConfig` - reload config
+- `:so` - reload lua file
