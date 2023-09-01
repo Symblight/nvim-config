@@ -49,12 +49,6 @@ nvim_lsp.cssls.setup {
   capabilities = capabilities,
 }
 
--- CSS Modules
-nvim_lsp.cssmodules_ls.setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
-}
-
 -- HTML
 nvim_lsp.html.setup {
   on_attach = on_attach,

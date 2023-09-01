@@ -34,6 +34,10 @@ https://github.com/rockerBOO/awesome-neovim
 
 - `:%s/foo/bar/g` = replace 'foo' to 'bar'
 
+## Multi
+
+- CTRL+V, SHIFT + I, Esc
+
 ### Windows
 
 - `ctrl+w+S` = horizontal splitting
