@@ -17,6 +17,7 @@ require'nvim-treesitter.configs'.setup {
   ensure_installed = {
     "rust",
     "go",
+    "gomod",
     "python",
     "typescript",
     "javascript",
@@ -34,7 +35,10 @@ require'nvim-treesitter.configs'.setup {
     "scss",
     "lua",
     "regex",
-    "dot"
+    "dot",
+    "cpp",
+    "sql",
+    "gdscript",
   },
 }
 

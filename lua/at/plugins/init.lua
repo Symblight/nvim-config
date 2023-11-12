@@ -6,8 +6,7 @@ if fn.empty(fn.glob(install_path)) > 0 then
 
 return require("packer").startup(function(use) 
   use {"wbthomason/packer.nvim"}
-
-  use { "airblade/vim-rooter" }
+use { "airblade/vim-rooter" }
 
   use "folke/trouble.nvim"
 
@@ -101,6 +100,10 @@ return require("packer").startup(function(use)
   -- Rust
   use "rust-lang/rust.vim"
   use "cespare/vim-toml"
+
+  -- GO
+  use 'ray-x/go.nvim'
+  use 'ray-x/guihua.lua' -- recommended if need floating window support
 
   -- Game dev
   use 'habamax/vim-godot'
