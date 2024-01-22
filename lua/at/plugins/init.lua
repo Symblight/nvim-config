@@ -1,116 +1,115 @@
-local fn = vim.fn
-local install_path = fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
-if fn.empty(fn.glob(install_path)) > 0 then
-  packer_bootstrap = fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path}) end
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
 
-return require("packer").startup(function(use) 
-  use {"wbthomason/packer.nvim"}
-use { "airblade/vim-rooter" }
+return require("lazy").setup({ 
+ {"airblade/vim-rooter" } ,
 
-  use "folke/trouble.nvim"
+ {"folke/trouble.nvim"},
 
   -- Lualine
-  use  {
-    'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-  }
+ {
+  'nvim-lualine/lualine.nvim',
+   dependencies = { 'kyazdani42/nvim-web-devicons', opt = true }
+ },
 
-    -- LSP
-  use "neovim/nvim-lspconfig"
-  use "lspcontainers/lspcontainers.nvim"
-  use 'nvim-lua/lsp-status.nvim'
+     -- LSP
+ {"neovim/nvim-lspconfig"},
+ {  "lspcontainers/lspcontainers.nvim" },
+ {   'nvim-lua/lsp-status.nvim' },
 
-  use "L3MON4D3/LuaSnip" -- Snippets plugin
-  use "saadparwaiz1/cmp_luasnip"
+ {   "L3MON4D3/LuaSnip" }, -- Snippets plugin
+ {   "saadparwaiz1/cmp_luasnip" },
 
-  use "hrsh7th/cmp-nvim-lsp" -- Source nvim lsp
-  use "hrsh7th/cmp-buffer"
-  use "hrsh7th/cmp-path"
-  use "hrsh7th/cmp-nvim-lua"
-  use "hrsh7th/cmp-cmdline"
-  use "hrsh7th/nvim-cmp"
+ {   "hrsh7th/cmp-nvim-lsp" }, -- Source nvim lsp
+ {   "hrsh7th/cmp-buffer" },
+ {   "hrsh7th/cmp-path" },
+ {   "hrsh7th/cmp-nvim-lua" },
+ {   "hrsh7th/cmp-cmdline" },
+ {   "hrsh7th/nvim-cmp" },
 
-  use "windwp/nvim-autopairs"
-  use "onsails/lspkind-nvim"
+ {   "windwp/nvim-autopairs" },
+ {   "onsails/lspkind-nvim" },
 
-  use "folke/lsp-colors.nvim"
+ {   "folke/lsp-colors.nvim" },
 
-  -- Comments
-  use "tpope/vim-commentary"
-  -- Trim free space
-  use "csexton/trailertrash.vim"
-  -- []""()
-  use "tpope/vim-surround"
+   -- Comments
+    {"tpope/vim-commentary"},
+   -- Trim free space
+    {"csexton/trailertrash.vim"},
+   -- []""()
+    {"tpope/vim-surround"},
 
-  -- Lit template
-  use "jonsmithers/vim-html-template-literals"
+   -- Lit template
+   {"jonsmithers/vim-html-template-literals"},
 
-  -- Icons
-  use "kyazdani42/nvim-web-devicons"
+   -- Icons
+    {"kyazdani42/nvim-web-devicons"},
 
-  -- Treesitter
-  use "nvim-treesitter/nvim-treesitter"
+   -- Treesitter
+    {"nvim-treesitter/nvim-treesitter"},
 
-  -- Git
-  use "lewis6991/gitsigns.nvim"
+   -- Telescope
+    {
+     "nvim-telescope/telescope.nvim",
+     dependencies = {{"nvim-lua/popup.nvim"}, {"nvim-lua/plenary.nvim"}}
+   },
+    {"nvim-telescope/telescope-node-modules.nvim"},
+    {"nvim-telescope/telescope-fzy-native.nvim"},
+    { "nvim-telescope/telescope-file-browser.nvim" },
 
-  -- Telescope
-  use {
-    "nvim-telescope/telescope.nvim",
-    requires = {{"nvim-lua/popup.nvim"}, {"nvim-lua/plenary.nvim"}}
-  }
-  use {"nvim-telescope/telescope-node-modules.nvim"}
-  use {"nvim-telescope/telescope-packer.nvim"}
-  use {"nvim-telescope/telescope-fzy-native.nvim"}
-  use { "nvim-telescope/telescope-file-browser.nvim" }
+   -- JSX/JS
+    {"maxmellon/vim-jsx-pretty"},
+    {"pangloss/vim-javascript"},
+    { "styled-components/vim-styled-components" , branch =  'main' },
 
-  -- JSX/JS
-  use "maxmellon/vim-jsx-pretty"
-  use "pangloss/vim-javascript"
-  use { "styled-components/vim-styled-components" , branch =  'main' }
-  -- TSX/TS
-  use "peitalin/vim-jsx-typescript"
-  use "leafgarland/typescript-vim"
+   -- TSX/TS
+    {"peitalin/vim-jsx-typescript"},
+    {"leafgarland/typescript-vim"},
 
-  -- Svelte
-  use "evanleck/vim-svelte"
+   -- Svelte
+    {"evanleck/vim-svelte"},
 
-  -- FZF
-  use { "junegunn/fzf", run = "./install --all" }
-  use { "junegunn/fzf.vim" }
+   -- FZF
+    { "junegunn/fzf", run = "./install --all" },
+    { "junegunn/fzf.vim" },
 
-  -- Colorshemas
-  use "morhetz/gruvbox"
-  use "nanotech/jellybeans.vim"
-  use "jaredgorski/SpaceCamp"
-  use "tpope/vim-vividchalk"
-  use "ayu-theme/ayu-vim"
-  use "tomasr/molokai"
-  use "sainnhe/sonokai"
+   -- Colorshemas
+    {"morhetz/gruvbox"},
+    {"nanotech/jellybeans.vim"},
+    {"jaredgorski/SpaceCamp"},
+    {"tpope/vim-vividchalk"},
+    {"ayu-theme/ayu-vim"},
+    {"tomasr/molokai"},
+    {"sainnhe/sonokai"},
 
-  -- CSS
+   -- CSS
 
-  -- Formatters
-  use "prettier/vim-prettier"
+   -- Formatters
+    {"prettier/vim-prettier"},
 
-  -- JSON
-  use "elzr/vim-json"
+   -- JSON
+    {"elzr/vim-json"},
 
-  -- Rust
-  use "rust-lang/rust.vim"
-  use "cespare/vim-toml"
+   -- Rust
+    {"rust-lang/rust.vim"},
+    {"cespare/vim-toml"},
 
-  -- GO
-  use 'ray-x/go.nvim'
-  use 'ray-x/guihua.lua' -- recommended if need floating window support
+   -- GO
+    {'ray-x/go.nvim'},
+   {'ray-x/guihua.lua'}, -- recommended if need floating window support
 
-  -- Game dev
-  use 'habamax/vim-godot'
+   -- Game dev
+    {'habamax/vim-godot'}
 
-  -- Automatically set up your configuration after cloning packer.nvim
-  -- Put this at the end after all plugins
-  if packer_bootstrap then
-    require('packer').sync()
-  end
-end)
+})
