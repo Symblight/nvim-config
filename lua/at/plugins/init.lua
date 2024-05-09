@@ -8,8 +8,7 @@ if not vim.loop.fs_stat(lazypath) then
     "https://github.com/folke/lazy.nvim.git",
     "--branch=stable", -- latest stable release
     lazypath,
-  })
-end
+  }) end
 vim.opt.rtp:prepend(lazypath)
 
 return require("lazy").setup({ 
@@ -92,6 +91,7 @@ return require("lazy").setup({
     {"ayu-theme/ayu-vim"},
     {"tomasr/molokai"},
     {"sainnhe/sonokai"},
+    {"rebelot/kanagawa.nvim"},
 
    -- CSS
 

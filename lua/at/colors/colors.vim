@@ -34,7 +34,9 @@ let g:sonokai_enable_italic = 1
 let g:sonokai_dim_inactive_windows = 1
 let g:sonokai_menu_selection_background = 'green'
 let g:sonokai_diagnostic_line_highlight = 1
-colorscheme sonokai
+" colorscheme sonokai
+
+colorscheme kanagawa  
 
 hi Comment gui=italic
 hi htmlArg gui=italic
