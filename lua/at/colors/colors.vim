@@ -36,7 +36,7 @@ let g:sonokai_menu_selection_background = 'green'
 let g:sonokai_diagnostic_line_highlight = 1
 " colorscheme sonokai
 
-colorscheme kanagawa  
+colorscheme kanagawa-wave
 
 hi Comment gui=italic
 hi htmlArg gui=italic

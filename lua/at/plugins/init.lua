@@ -12,6 +12,9 @@ if not vim.loop.fs_stat(lazypath) then
 vim.opt.rtp:prepend(lazypath)
 
 return require("lazy").setup({ 
+  -- GIT
+{"sindrets/diffview.nvim"},
+
  {"airblade/vim-rooter" } ,
 
  {"folke/trouble.nvim"},
