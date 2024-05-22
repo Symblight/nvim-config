@@ -33,7 +33,7 @@ vim.cmd('filetype plugin on')
 vim.opt.wildignore = {'*/cache/*', '*/tmp/*'}
 if vim.fn.has('termguicolors') then
   -- vim.o.termguicolors = true
-  vim.o.t_Co = true
+  -- vim.o.t_Co = true
 end
 
 
