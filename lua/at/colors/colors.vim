@@ -36,7 +36,7 @@ let g:sonokai_menu_selection_background = 'green'
 let g:sonokai_diagnostic_line_highlight = 1
 " colorscheme sonokai
 
-colorscheme kanagawa-wave
+colorscheme spacecamp
 
 hi Comment gui=italic
 hi htmlArg gui=italic
@@ -55,6 +55,6 @@ syntax on
 let s:t_Co = exists('&t_Co') && !empty(&t_Co) && &t_Co > 1 ? &t_Co : 2
 " Transparent
 "
-hi Normal guibg=NONE ctermbg=NONE
-autocmd VimEnter * hi Normal ctermbg=NONE guibg=NONE
+" hi Normal guibg=NONE ctermbg=NONE
+" autocmd VimEnter * hi Normal ctermbg=NONE guibg=NONE
 
