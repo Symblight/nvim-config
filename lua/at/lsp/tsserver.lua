@@ -8,7 +8,7 @@ local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = require('cmp_nvim_lsp').default_capabilities(capabilities)
 
 
-nvim_lsp.tsserver.setup {
+nvim_lsp.ts_ls.setup {
     on_attach = function(client, bf)
         client.server_capabilities.documentFormattingProvider = false
         on_attach(client, bf)

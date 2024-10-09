@@ -17,8 +17,8 @@ let g:jellybeans_background_color= 'none'
  " colorscheme jellybeans
 
 "
-" set background=dark
-" colorscheme gruvbox
+colorscheme gruvbox
+set background=dark
 
 
 let g:rehash256 = 1
@@ -36,7 +36,7 @@ let g:sonokai_menu_selection_background = 'green'
 let g:sonokai_diagnostic_line_highlight = 1
 " colorscheme sonokai
 
-colorscheme spacecamp
+" colorscheme spacecamp
 
 hi Comment gui=italic
 hi htmlArg gui=italic

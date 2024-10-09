@@ -33,4 +33,3 @@ inoremap <up> <c-o>:echo "no up for you!"<cr>
 nnoremap <down> :echo "no down for you!"<cr>
 vnoremap <down> :<c-u>echo "no down for you!"<cr>
 inoremap <down> <c-o>:echo "no down for you!"<cr>
-
