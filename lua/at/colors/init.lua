@@ -1,1 +1,1 @@
-vim.cmd 'source ~/.config/nvim/lua/at/colors/colors.vim'
+vim.cmd("source " .. vim.fn.stdpath("config") .. "/lua/at/colors/colors.vim")

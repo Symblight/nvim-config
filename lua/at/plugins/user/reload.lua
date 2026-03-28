@@ -6,8 +6,8 @@ function _G.ReloadConfig()
 	end
 
 	dofile(vim.env.MYVIMRC)
-  print( 'Config file:', vim.env.MYVIMRC )
-  vim.notify("Nvim configuration reloaded!", vim.log.levels.INFO)
+	print("Config file:", vim.env.MYVIMRC)
+	vim.notify("Nvim configuration reloaded!", vim.log.levels.INFO)
 end
 
 vim.api.nvim_create_user_command("ReloadConfig", ReloadConfig, { desc = "reload lua.user.*.lua" })

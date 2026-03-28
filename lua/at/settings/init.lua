@@ -2,7 +2,7 @@ local vim = vim
 
 vim.wo.number = true
 vim.wo.relativenumber = true
-vim.wo.signcolumn = 'auto'
+vim.wo.signcolumn = "auto"
 vim.wo.numberwidth = 2
 vim.g.mapleader = ","
 
@@ -23,30 +23,29 @@ vim.opt.hlsearch = true
 vim.opt.showcmd = true
 vim.opt.mouse = "a"
 
-vim.o.colorcolumn = '0'
-vim.o.mouse = 'a'
+vim.o.colorcolumn = "0"
+vim.o.mouse = "a"
 vim.o.title = true
 vim.o.winbar = "%f"
 
-vim.cmd('filetype plugin on')
+vim.cmd("filetype plugin on")
 
-vim.opt.wildignore = {'*/cache/*', '*/tmp/*'}
-if vim.fn.has('termguicolors') then
-  -- vim.o.termguicolors = true
-  -- vim.o.t_Co = true
+vim.opt.wildignore = { "*/cache/*", "*/tmp/*" }
+if vim.fn.has("termguicolors") then
+	-- vim.o.termguicolors = true
+	-- vim.o.t_Co = true
 end
-
 
 if vim.fn.has("unix") then
-  local uname = vim.fn.system("uname -s")
-  -- Do Mac stuff
-  if uname == "Darwin\n" then
-    vim.opt.clipboard = 'unnamedplus'
-  end
+	local uname = vim.fn.system("uname -s")
+	-- Do Mac stuff
+	if uname == "Darwin\n" then
+		vim.opt.clipboard = "unnamedplus"
+	end
 end
 
+vim.api.nvim_set_keymap("n", ",<space>", ":nohlsearch<CR>", { noremap = true })
 
-vim.api.nvim_set_keymap('n', ',<space>', ':nohlsearch<CR>', {noremap = true})
-
-vim.cmd 'source ~/.config/nvim/lua/at/settings/buffers.vim'
-vim.cmd 'source ~/.config/nvim/lua/at/settings/settings.vim'
+local config_dir = vim.fn.stdpath("config")
+vim.cmd("source " .. config_dir .. "/lua/at/settings/buffers.vim")
+vim.cmd("source " .. config_dir .. "/lua/at/settings/settings.vim")
