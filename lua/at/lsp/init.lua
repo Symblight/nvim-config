@@ -64,7 +64,7 @@ vim.lsp.config("bashls", {
 -- YML
 vim.lsp.config("yamlls", {
 	on_attach = on_attach,
-	capabilities = capabilities,
+	capabilities = capabilities,	filetypes = { "yaml" },
 })
 
 -- Go
@@ -86,7 +86,7 @@ vim.lsp.config("gopls", {
 -- Godot script
 vim.lsp.config("gdscript", {
 	on_attach = on_attach,
-	capabilities = capabilities,
+	capabilities = capabilities,	filetypes = { "gdscript" },
 })
 
 vim.lsp.enable({

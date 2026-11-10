@@ -10,10 +10,8 @@ vim.lsp.config("diagnosticls", {
 	filetypes = {
 		"javascript",
 		"javascriptreact",
-		"javascript.jsx",
 		"typescript",
 		"typescriptreact",
-		"typescript.tsx",
 		"json",
 		"css",
 		"less",

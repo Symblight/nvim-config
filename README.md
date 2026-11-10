@@ -55,15 +55,48 @@ https://github.com/rockerBOO/awesome-neovim
 
 `leader` = ','
 
-- `ctrl+S` = autocomplete
-- `ctrl+ca` = Lsp actions to fix
-- `ctrl+h` = docs
-- `K` = description
-- `Space + rr` = Rename
-- `space+ff` = telescope
-- `gr` = search all cases
-- `ctrl+a` = open tree files
 - `viw*` = search hightlighted word (n - bottom, N- top movement)
+- `,<space>` = clear search highlight
+
+### LSP
+
+| Key         | Action                                         |
+| ----------- | ---------------------------------------------- |
+| `K`         | Hover info (type / docs) for word under cursor |
+| `gd`        | Go to definition                               |
+| `gD`        | Go to declaration                              |
+| `gi`        | Go to implementation                           |
+| `gr`        | List references                                |
+| `Space D`   | Go to type definition                          |
+| `Space rn`  | Rename symbol                                  |
+| `Space ca`  | Code actions (quick fix)                       |
+| `Space f`   | Format buffer                                  |
+| `Space e`   | Show diagnostic of current line in a popup     |
+| `[d` / `]d` | Previous / next diagnostic                     |
+| `Space q`   | All diagnostics to location list               |
+| `Space wa` / `Space wr` / `Space wl` | Add / remove / list workspace folders |
+
+### Completion (insert mode)
+
+| Key                 | Action                  |
+| ------------------- | ----------------------- |
+| `Ctrl-S`            | Trigger completion      |
+| `Ctrl-e`            | Abort completion        |
+| `Ctrl-b` / `Ctrl-f` | Scroll docs up / down   |
+
+### Telescope
+
+| Key        | Action                                  |
+| ---------- | --------------------------------------- |
+| `Space ff` | Find files (relative to current file)   |
+| `Space lg` | Live grep                               |
+| `Space b`  | Buffers                                 |
+| `Space fb` | File browser                            |
+| `Space h`  | Help tags                               |
+
+### Move lines
+
+- `Ctrl-j` / `Ctrl-k` = move line (or selection) down / up
 
 ### replace
 
