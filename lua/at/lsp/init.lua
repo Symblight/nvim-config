@@ -55,22 +55,10 @@ vim.lsp.config("svelte", {
 	filetypes = { "svelte" },
 })
 
--- Vue
-vim.lsp.config("vuels", {
-	capabilities = capabilities,
-	on_attach = on_attach,
-})
-
 -- Bash
 vim.lsp.config("bashls", {
 	capabilities = capabilities,
 	on_attach = on_attach,
-})
-
--- Ruby
-vim.lsp.config("solargraph", {
-	on_attach = on_attach,
-	flags = { debounce_text_changes = 150 },
 })
 
 -- YML
@@ -108,16 +96,14 @@ vim.lsp.enable({
 	"html",
 	"dockerls",
 	"svelte",
-	"vuels",
 	"bashls",
-	"solargraph",
 	"yamlls",
 	"gopls",
 	"gdscript",
 })
 
 -- Diagnostics display
-vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
+vim.diagnostic.config({
 	underline = true,
 	virtual_text = {
 		spacing = 4,

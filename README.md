@@ -2,11 +2,46 @@
 
 # Contents
 
-- Neovim 0.9.1 config
+- Neovim 0.12 config
+
+# Setup on a new machine
+
+### Prerequisites
+
+- `node` / `npm`, `go`, `rustup`
+- `ripgrep` (Telescope live grep), optionally `fd`
 
 ### LSP servers
 
-https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
+Enabled in `lua/at/lsp/`. Install the executables before the first run:
+
+| Server          | Language                 | Executable                                                   |
+| --------------- | ------------------------ | ------------------------------------------------------------ |
+| `ts_ls`         | JS / TS                  | `typescript-language-server`                                 |
+| `diagnosticls`  | eslint / prettier        | `diagnostic-languageserver` (+ `eslint_d`, `prettier`)       |
+| `pyright`       | Python                   | `pyright-langserver`                                         |
+| `rust_analyzer` | Rust                     | `rust-analyzer`                                              |
+| `cssls`, `html` | CSS, HTML                | `vscode-css-language-server`, `vscode-html-language-server`  |
+| `dockerls`      | Dockerfile               | `docker-langserver`                                          |
+| `svelte`        | Svelte                   | `svelteserver`                                               |
+| `bashls`        | Bash                     | `bash-language-server`                                       |
+| `yamlls`        | YAML                     | `yaml-language-server`                                       |
+| `gopls`         | Go                       | `gopls`                                                      |
+| `gdscript`      | Godot                    | none, connects to a running Godot editor                     |
+
+```sh
+npm i -g typescript typescript-language-server \
+  diagnostic-languageserver eslint_d prettier \
+  pyright vscode-langservers-extracted dockerfile-language-server-nodejs \
+  svelte-language-server bash-language-server yaml-language-server
+rustup component add rust-analyzer
+go install golang.org/x/tools/gopls@latest
+```
+
+Optional: `:GoInstallBinaries` for go.nvim tools.
+
+Check with `:checkhealth vim.lsp`. Server docs:
+https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md
 
 ### Awesome neovim
 

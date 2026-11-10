@@ -1,6 +1,6 @@
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
-if not vim.loop.fs_stat(lazypath) then
+if not vim.uv.fs_stat(lazypath) then
 	vim.fn.system({
 		"git",
 		"clone",
@@ -114,4 +114,7 @@ return require("lazy").setup({
 
 	-- Game dev
 	{ "habamax/vim-godot" },
+}, {
+	-- No plugin needs luarocks; disable to silence hererocks errors
+	rocks = { enabled = false },
 })
