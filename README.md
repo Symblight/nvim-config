@@ -8,8 +8,17 @@
 
 ### Prerequisites
 
-- `node` / `npm`, `go`, `rustup`
+- `git`, `node` / `npm`, `go`, `rustup`
 - `ripgrep` (Telescope live grep), optionally `fd`
+- `tree-sitter` CLI + a C compiler (treesitter parsers): `brew install tree-sitter-cli`
+- A Nerd Font in the terminal (icons)
+
+### Windows
+
+- Clone into `%LOCALAPPDATA%\nvim` instead of `~/.config/nvim`
+- Install a C compiler for treesitter parsers (`zig`, MinGW `gcc` or MSVC) and `tree-sitter` CLI (`npm i -g tree-sitter-cli`)
+- Tools via `winget` / `scoop`: `git`, `ripgrep`, `fd`, `node`, `go`, `rustup`
+- The fzf binary is downloaded by lazy.nvim on install
 
 ### LSP servers
 
@@ -20,6 +29,7 @@ Enabled in `lua/at/lsp/`. Install the executables before the first run:
 | `ts_ls`         | JS / TS                  | `typescript-language-server`                                 |
 | `diagnosticls`  | eslint / prettier        | `diagnostic-languageserver` (+ `eslint_d`, `prettier`)       |
 | `pyright`       | Python                   | `pyright-langserver`                                         |
+| `ruff`          | Python (format / lint)   | `ruff`                                                       |
 | `rust_analyzer` | Rust                     | `rust-analyzer`                                              |
 | `cssls`, `html` | CSS, HTML                | `vscode-css-language-server`, `vscode-html-language-server`  |
 | `dockerls`      | Dockerfile               | `docker-langserver`                                          |
@@ -36,6 +46,7 @@ npm i -g typescript typescript-language-server \
   svelte-language-server bash-language-server yaml-language-server
 rustup component add rust-analyzer
 go install golang.org/x/tools/gopls@latest
+brew install ruff   # Windows: winget install astral-sh.ruff
 ```
 
 Optional: `:GoInstallBinaries` for go.nvim tools.
@@ -112,7 +123,9 @@ https://github.com/rockerBOO/awesome-neovim
 - `ctrl+w+v` = vertical splitting
 - `ctrl+w+left/right/up/down` = switch between panels
 
-- `,tt` = toggle troubles
+- `,tt` / `,tw` = toggle diagnostics list (Trouble)
+- `,td` = diagnostics of current buffer
+- `,tq` = quickfix list
 
 ### Git
 
@@ -145,17 +158,14 @@ BurntSushi/ripgrep is required for live_grep and grep_string
 ### NORMAL mode
 
 - `gcc` - Toggles the current line using linewise comment
-- `gbc` - Toggles the current line using blockwise comment
 
 ### VISUAL mode
 
 - `gc` - Toggles the region using linewise comment
-- `gb` - Toggles the region using blockwise comment
-- `g<` - Uncomments
 
 ## Telescope
 
-install FZF native for telescope
+Uses `telescope-fzy-native` for sorting (no build step needed)
 
 # GIT
 

@@ -1,5 +1,3 @@
--- require('at.libs')
-
 require("at.settings")
 require("at.plugins")
 require("at.plugins.user")
@@ -9,5 +7,4 @@ require("at.mappings")
 require("at.telescope")
 require("at.lsp")
 require("at.status-line")
-require("at.git")
 require("at.completion")

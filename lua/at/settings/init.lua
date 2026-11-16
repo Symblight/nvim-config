@@ -42,13 +42,8 @@ if vim.fn.has("termguicolors") then
 	-- vim.o.t_Co = true
 end
 
-if vim.fn.has("unix") then
-	local uname = vim.fn.system("uname -s")
-	-- Do Mac stuff
-	if uname == "Darwin\n" then
-		vim.opt.clipboard = "unnamedplus"
-	end
-end
+-- System clipboard (macOS, Linux, Windows)
+vim.opt.clipboard = "unnamedplus"
 
 vim.api.nvim_set_keymap("n", ",<space>", ":nohlsearch<CR>", { noremap = true })
 
